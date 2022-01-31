@@ -1,0 +1,112 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+% unit definition
+\def\degrees{\hbox{$^\circ$}}
+\def\Celsius{\hbox{ $^\circ$C}}
+\def\Rank{\hbox{ $^\circ$R}}
+\def\Faren{\hbox{ $^\circ$F}}
+\def\Kelvin{\hbox{ K}}
+\def\inch{\hbox{ in}}
+\def\ft{\hbox{ ft}}
+\def\lbm{\hbox{ lb_{m}}}
+\def\lbf{\hbox{ lb_{f}}}
+\def\slug{\hbox{ slug}}
+\def\psi{\hbox{ psi}}
+\def\psf{\hbox{ psf}}
+\def\pc{\hbox{ pc}}
+\def\nm{\mbox{ nm}}
+
+% hyperlink formatting
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=purple,
+    citecolor=blue
+}
+
+% Other general packages
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabto}
+\usepackage{booktabs, tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage{pgfplots}
+\usepackage{appendix}
+\usepackage[labelfont=bf, font={normalsize,stretch=1}]{caption}
+\usepackage[letterpaper, margin=1.0in]{geometry}
+\usepackage[utf8]{}
+\usepackage{indentfirst}
+\setlength{\parindent}{0.5in}
+\usepackage{lscape}
+
+%Heading format
+\usepackage{titlesec}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries\slshape}
+
+%Page Numbers
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{0cm}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+\pagenumbering{arabic}
+
+%listings package for code
+\usepackage{listings}
+\usepackage{xcolor}
+
+% define table package
+\usepackage{tabularx}
+\newcommand\setrow[1]{\gdef\rowmac{#1}#1\ignorespaces}
+% bibliography formatting
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\setstretch{2}
+
+% color definitions
+\definecolor{dblue}{HTML}{145680}
+\definecolor{dred}{HTML}{801414}
+\definecolor{dgreen}{HTML}{148014}
+\definecolor{bgcode}{rgb}{0.95,0.95,0.95}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\pgfplotsset{compat=1.17}
