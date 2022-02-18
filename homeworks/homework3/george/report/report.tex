@@ -46,14 +46,52 @@ A cambered wing offers more lift for no loss of drag. Yet, the NACA 0012 is stil
 \section{Finite Wing Analysis}
 \subsection{Part (a)}
 \subsubsection{i.}
-\subsubsection{ii.}
+The wings coefficient of lift at 6 and 12 degrees can be seen in the Table \ref{table:2ai} below.
 
+    \begin{table}[H]
+    \centering
+        \begin{tabular}{|c|c|c|c|c|} % set column nums and width
+            \hline \textbf{Angle of Attack ($\alpha$)} & \textbf{Coefficient of Lift ($C_L$)} \\ \hline % column headers
+            6$\degree$ & 0.449725 \\ \hline
+           12$\degree$ & 0.941413 \\ \hline
+        \end{tabular}
+        \label{table:2ai}
+    \end{table}
+
+    
+\subsubsection{ii.}
+Below are sceenshots of the finite wing model with the coefficient of pressure contour, the lift generation, and the streamlines of the flow are shown at both an angle of attack of 6 and 12 degrees.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{homeworks/homework3/george/plots/problem2_b_6.PNG}
+        \caption{\textbf{Contour $C_p$ mapping, $C_L$, and Streamlines at 6$\degree$}}
+        \label{fig:2bii6}
+\end{figure}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{homeworks/homework3/george/plots/problem2_b_12.PNG}
+        \caption{\textbf{$C_p$ Contour , Lift, and Streamlines at 12$\degree$}}
+        \label{fig:2bii12}
+\end{figure}
 \subsubsection{iii.}
+Below, in Table \ref{table:2aiii}, the location of the coefficient of pressure load point and location of the center of gravity is shown for the angles of attack of 6 and 12 degrees. These distances are referenced from the tip of the wing.
+\begin{table}[H]
+    \centering
+        \begin{tabular}{|c|c|c|c|c|} % set column nums and width
+            \hline \textbf{Angle of Attack ($\alpha$)} & \textbf{$X_{cp}$} & \textbf{$X_{cg}$} \\ \hline % column headers
+            6$\degree$ & 0.154 m & .204 m \\ \hline
+           12$\degree$ & 0.152 m & .204 m \\ \hline
+        \end{tabular}
+        \label{table:2aiii}
+    \end{table}
 \subsection{Part (b)}
 The neutral point for the wing is found to be \textbf{0.152 m} from the front of the wing.
 
 \section{Flying Wing Analysis}
 \subsection{Part (a)}
+In order to observe whether the slope of the coefficient of moment vs angle of attack is positive or negative, it was plotted.
+
+As we can see above in Figure \ref{fig:3ai}, the slope is very slightly negative.
 \subsection{Part (b)}
 \end{singlespace}
 \end{document}
