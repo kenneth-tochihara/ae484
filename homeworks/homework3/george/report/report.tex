@@ -9,7 +9,7 @@
 \maketitle
 \begin{singlespace}
 \section{Symmetric and Cambered Airfoil Analysis}
-\textbf{Note:}I have exported all of the polar's data from XLR5 then made python script to plot this data. All of the code will be attached at the bottom of the homework.
+\textbf{Note:} I have exported all of the polar's data from XLR5 then made python script to plot this data. All of the code will be attached at the bottom of the homework.
 \subsection{Part (a)}
 Plot of the coefficient of lift across different angles of attack can be seen below. The NACA 0012 airfoil is in blue and the NACA 4412 is in red.
 \begin{figure}[H]
@@ -103,8 +103,7 @@ In order to observe whether the slope of the coefficient of moment vs angle of a
 As we can see above in Figure \ref{fig:3ai}, the slope is slightly negative.
 \subsubsection{ii.}
 The location where the coefficient of moment is zero is at \textbf{2 degrees} of angle of attack. 
-\subsection{Part (b)}
-    EXTRA CREDIT IF I HAVE TIME!
+
 
 \newpage
 \section{\textbf{Raw Data}}
@@ -168,7 +167,7 @@ alpha & CL      & CD      & CDp     & Cm      & Top Xtr & Bot Xtr & Cpmin   & Ch
 \end{tabular}
 \end{table}
 
-\begin{table}[H]
+\begin{sidewaystable}
 \caption{\textbf{NACA0012 Finite Wing Data}} \label{table:NACA0012_finite}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 alpha & Beta & CL       & CDi      & CDv      & CD       & CY & Cl & Cm       & Cn & Cni & QInf & XCP    \\
@@ -190,9 +189,9 @@ alpha & Beta & CL       & CDi      & CDv      & CD       & CY & Cl & Cm       & 
 13    & 0    & 1.027441 & 0.044354 & 0.016336 & 0.06069  & 0  & 0  & 0.196456 & 0  & 0   & 38   & 0.1501 \\
 14    & 0    & 1.105456 & 0.051288 & 0.018477 & 0.069766 & 0  & 0  & 0.210959 & 0  & 0   & 38   & 0.1497 
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 
-\begin{table}[H]
+\begin{sidewaystable}
 \caption{\textbf{NACA0012 Finite Wing with Wing Tips Data}} \label{table:NACA0012_finite_tips}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 alpha & Beta & CL       & CDi      & CDv      & CD       & CY       & Cl & Cm       & Cn & Cni & QInf & XCP    \\
@@ -213,7 +212,7 @@ alpha & Beta & CL       & CDi      & CDv      & CD       & CY       & Cl & Cm   
 12    & 0    & 0.941413 & 0.028549 & 0.015037 & 0.043586 & 0.000001 & 0  & -0.03299 & 0  & 0   & 38   & 0.2043 \\
 13    & 0    & 1.020522 & 0.033179 & 0.01698  & 0.050158 & 0.000001 & 0  & -0.03557 & 0  & 0   & 38   & 0.2045        
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 \newpage
 \section{\textbf{Code}}
     \lstinputlisting[language=python, caption=\bfseries code.py, label=lst:code]{homeworks/homework3/george/code/code.py}
