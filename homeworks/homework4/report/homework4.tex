@@ -21,293 +21,147 @@
 
 %%% Title Pa
 \begin{center}
-    {\Large\textbf{AE 484 Homework 2}}\\
-    Anshuk Chigullapalli, George Petrov, Kenneth Tochihara, Jeffery Zhou\\
+    {\Large\textbf{AE 484 Homework 4}}\\
+    Anshuk Chigullapalli, Max Kaiser, George Petrov, Kenneth Tochihara, Jeffery Zhou\\
 \end{center}
 
+% George, Anshuk, Kenneth
+\section{Vehicle Design}
 
-\section{Group name and leader}
-% Determine a group name and vote/select a group leader
-
-    \textbf{Group Name:} Illinois Air Society % subject to change
+    % Anshuk
+    \subsection{Fabrication Drawings}
+    % Detail 3 view drawings (or two views when appropriate) view drawings of all fabricated components sufficiently dimensioned for manufacturing. Note that complex curves such as airfoils can show overall dimensions (like the chord length and thickness) with a leader and note to the surface indicating that the curve will be provided electronically. Be sure to name all parts and indicate the quantity and material they are made out of.
     
-    \textbf{Group Leader:} George Petrov % subject to change
-
-\section{Existing tailless RC aircraft}
-% Search the internet or publications and evaluate 4 flying wing (tailless) R/C or UAV aircraft. In a table determine the following: Name of the aircraft, Wing planform area, Winglet planform area, weight of the aircraft, wing loading (W/S), Wing sweep, Wing taper ratio, wing root chord length, wing tip chord length, wing span, motor position (tractor or pusher), motor size (power), link or reference where information was gathered. Note that many of these quantities are estimates and may need to be scaled from pictures or schematics.
-
-    \begin{table}[H]
-        \begin{tabular}{|c|c|c|c|c|} % set column nums and width
-            \hline \textbf{Name} & \textbf{Wing area (in$^\textbf{2}$)} & \textbf{Winglet area (in$^\textbf{2}$)} & \textbf{Weight (lb)} & \textbf{Loading (oz/in$^2$)} \\ \hline % column headers
-            RQ-170 & 40512.5 & 0 & 8500 & 3.36 \\ \hline
-            Northrop Grumman Bat & 7125 & 351 & 350 & 0.786 \\ \hline
-            Skynetic Neptune II Blue & 381.8 & 0 & 1.256 & 0.0526 \\ \hline
-            Northrop Grumman X-47B & 137318.4 & 0 & 14000 & 5.127 \\ \hline
-        \end{tabular}
-    \end{table}
+    The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
     
-    \begin{table}[H]
-        \begin{tabular}{|c|c|c|c|c|c| } % set column nums and width
-            \hline \textbf{Name} & \textbf{Sweep} & \textbf{Taper ratio} & \textbf{Root chord (in)} & \textbf{Tip chord (in)} & \textbf{Span (in)} \\ \hline % column headers
-            RQ-170 & 33$\degree$ & 0.187 & 148 & 27 & 463 \\ \hline
-            Northrop Grumman Bat & 46$ \degree$ & 0.3 & 73 & 22 & 168 \\ \hline
-            Skynetic Neptune II Blue & 33$ \degree$ & 0.481 & 13.12 & 6.310 & 39.3 \\ \hline
-            Northrop Grumman X-47B & 70 $\degree$ & 0.67 & 456 & 305.52 & 744\\ \hline
-        \end{tabular}
-    \end{table}
+    % insert images of the dimensioned drawings? Or create an appendix
     
-    \begin{table}[H]
-        \begin{tabular}{|c|c|c|c| } % set column nums and width
-            \hline \textbf{Name} & \textbf{Motor position} & \textbf{Motor size} & \textbf{Reference} \\ \hline % column headers
-            RQ-170  & Pusher & \href{https://en.wikipedia.org/wiki/General_Electric_TF34}{General Electric TF34} & \href{https://en.wikipedia.org/wiki/Lockheed_Martin_RQ-170_Sentinel}{Wikipedia}\\ \hline
-            Northrop Grumman Bat & Pusher & Hirth Engine & \href{https://en.wikipedia.org/wiki/Northrop_Grumman_Bat}{Wikipedia}\\ \hline
-
-             Skynetic Neptune II Blue & Pusher & ASS2212 KV (1.1" diameter) & \href{https://www.motionrc.com/products/skynetic-neptune-ii-blue-1000mm-39-3-wingspan-pnp?variant=39681690927289}{MotionRC}\\ \hline
-             Northrop Grumman X-47B & Pusher & Pratt Whitney F100-220U & \href{https://www.militaryfactory.com/aircraft/detail.php?aircraft_id=1015}{MilitaryFactory} \\ \hline
-        \end{tabular}
-    \end{table}
-
-\section{Objectives and Constraints}
-% Write a paragraph summarizing objectives and what constraints are place on your design. In addition to the mission objectives create bulleted items of design objectives and constraints which your vehicle should meet with numerical values when possible. Mark each numbered bulleted item with a 1 thru 3 number indicating the level of importance (1-vehicle must meet item, 2-some flexibility in item, 3-optional).
-
-    The overall objective of the mission is to design and build a mini-UAV that deploys a vial of vaccine to a remote area. This UAV shall be hand-launched and shall land without any landing gears. Testing shall remain within line-of-sight (LOS) and shall abide by the Academy of Model Aeronautics (AMA) guidelines. The UAV shall be tailless with only two control surfaces (one elevon on each wing). Propeller/Motor/Speed Controller/Battery combinations are provided and shall be utilized within the design. This UAV shall be capable of achieving altitude quickly. The UAV's wings shall be made with Balsa reinforced foam with a fiberglass covering and shall be propelled with a tractor or pusher configuration.
-    The following points highlight the numerical constraints of the problem statement.
+    % add a table of all the fabricated parts
     
-    \begin{itemize}
-        \item \textbf{Max Altitude (1):} 400 ft
-        \item \textbf{Flight Time (2):} 15 min
-        \item \textbf{Top Speed (2):} 40 mph
-        \item \textbf{Max Thickness (3):} 1.75 in
-        \item \textbf{Max Wingspan (1):} 70 in
-        \item \textbf{Max Weight (3):} 3 lbs
-    \end{itemize}
-
-\section{Individual Vehicle Concepts}
-% Each individual in your group must present one vehicle concept. Each individual should present a three-view drawing (CAD preferred, but very nice ruler and template drawn sketches acceptable) and isometric view of their vehicle configuration the individual proposes with basic (overall) dimensions to ascertain the general size and shape. Indicate which individual is responsible for each design (points may be deducted from the overall grade for individuals who do not have a professional presentation of their concept).
-
-    The engineering drawings of each individual member's CAD designs are attached at the end of the assignment.
-
-\section{Weight and Wing Loading of Vehicle Concepts}
-% Estimate the weight and wing loading of each concept aircraft (take-off weight). Be sure to include all instrumentation, cargo, battery, etc. in your analysis. Also indicate how you estimated the weight of the structure (i.e. fuselage, spars, skin, bulkheads, winglets, etc.) in the concept drawings. Be sure to include a table with all the weights of the components clearly presented and example calculations of estimated values
+ \begin{table}[H]
+     \begin{center}
+     \setstretch{1} 
+     \caption{\textbf{Fabricated Components}} \label{table:fab_components}
+     \begin{tabular}{|p{2in}|p{1in}|p{1in}|p{1in}|} % set column nums and width
+         \hline \textbf{Component} & \textbf{Quantity} & \textbf{Material} & \textbf{Comments} \\ \hline % column headers
+         Wing & 2 & Foam & bruh \\ \hline
+     \end{tabular}
+     \end{center}
+ \end{table}
     
-    \subsection{Anshuk}
-    \begin{table}[H]
-        \begin{tabular}{|c|c| } % set column nums and width
-            \hline \textbf{Component} & \textbf{Mass (g)} \\ \hline % column headers
-            \href{https://www.amazon.com/Brushless-Outrunner-Multicopters-Helicopter-Control/dp/B08MKQFSVF/ref=asc_df_B08MKQFSVF/?tag=hyprod-20&linkCode=df0&hvadid=475795164185&hvpos=&hvnetw=g&hvrand=9902342740412303481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-1195392311214&th=1}{GFORCE E480 BRUSHLESS OUTRUNNER MOTOR (3530 - 1100KV)} & 100 \\ \hline
-            \href{http://www.valuehobby.com/gforce-40a-esc.html}{GFORCE 40A BRUSHLESS ESC (T-CONNECTOR)} & 35 \\ \hline
-            \href{http://www.valuehobby.com/30c-2200mah-3s-t.html}{GFORCE 30C 2200MAH 3S 11.1V LIPO (T-CONNECTOR)} & 186 \\ \hline
-            \href{https://www.masterairscrew.com/products/electric-only-12x6-propeller?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google\%20Shopping&gclid=CjwKCAiA9aKQBhBREiwAyGP5laqPgb8z2BGon5sD8qHYRZQVab7IcA0DZg8DOcFMsDTccBgRqirzgBoC1wkQAvD_BwE}{Electric Only - 12x6 Propeller} & 27 \\ \hline
-            \href{https://www.horizonhobby.com/product/ar620-dsmx-6-channel-sport-receiver/SPMAR620.html?gclid=CjwKCAiA9aKQBhBREiwAyGP5lX6-hyQKl87DI0WH0pgWG2HS0woZKcd-L2bMRS_qWmVI1fLqpeCX0BoCrRAQAvD_BwE}{Spektrum AR620 DSMX 6-Channel Sport Receiver} & 8 \\ \hline
-            \href{https://arrishobby.com/emax-es08ma-ii-12g-mini-metal-gear-analog-servo-p0842.html?VariantsId=12700}{EMAX ES08MA II ANALOG METAL GEAR MICRO SERVO} & 36 \\ \hline
-            Wing & 560 \\ \hline
-            Fuselage "bump" & 350 \\ \hline
-            Vial & 5 \\ \hline
-            \textbf{Total} & 1307 \\ \hline
-        \end{tabular}
-        \end{table}
-        The weight estimates of the COTS components is based on the parts provided in the problem statement, such as the brush-less motor and the vial. Other COTS components, such as the micro-servo and the propeller, were obtained from providers online (references are hyperlinked in the table above). 
-        
-        For the weight of the wings themselves, the given wing area density of 0.033 oz/in$^2$ was used. The wing area of this design was 597.753 in$ ^2 $. With these values, we get the weight of the wing to be 19.73 oz $ = $ 560 grams.
-        The aircraft has no winglets. There is also no explicit fuselage, however the fused "bump" that houses the vial and all electric components adds the additional weight of roughly 350 grams that includes the weight of the skin and any required supports. The aircraft also doesn't have a vertical stabilizer, and so no additional mass is added there.
-        
-        The total weight of the weight of the aircraft is approximated to be 1307 grams, or 2.88 lbs. Therefore, the design is currently under the weight limit. The wing loading based on the wing area and the calculating weight of the aircraft is 0.077 oz/in$^2$. 
-        
-    \subsection{George}
-     \begin{table}[H]
-        \begin{tabular}{|c|c| } % set column nums and width
-            \hline \textbf{Component} & \textbf{Mass (g)} \\ \hline % column headers
-            \href{https://www.amazon.com/Brushless-Outrunner-Multicopters-Helicopter-Control/dp/B08MKQFSVF/ref=asc_df_B08MKQFSVF/?tag=hyprod-20&linkCode=df0&hvadid=475795164185&hvpos=&hvnetw=g&hvrand=9902342740412303481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-1195392311214&th=1}{GFORCE E480 BRUSHLESS OUTRUNNER MOTOR (3530 - 1100KV)} & 100 \\ \hline
-            \href{http://www.valuehobby.com/gforce-40a-esc.html}{GFORCE 40A BRUSHLESS ESC (T-CONNECTOR)} & 35 \\ \hline
-            \href{http://www.valuehobby.com/30c-2200mah-3s-t.html}{GFORCE 30C 2200MAH 3S 11.1V LIPO (T-CONNECTOR)} & 186 \\ \hline
-            \href{https://www.masterairscrew.com/products/electric-only-12x6-propeller?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google\%20Shopping&gclid=CjwKCAiA9aKQBhBREiwAyGP5laqPgb8z2BGon5sD8qHYRZQVab7IcA0DZg8DOcFMsDTccBgRqirzgBoC1wkQAvD_BwE}{Electric Only - 12x6 Propeller} & 27 \\ \hline
-            \href{https://www.horizonhobby.com/product/ar620-dsmx-6-channel-sport-receiver/SPMAR620.html?gclid=CjwKCAiA9aKQBhBREiwAyGP5lX6-hyQKl87DI0WH0pgWG2HS0woZKcd-L2bMRS_qWmVI1fLqpeCX0BoCrRAQAvD_BwE}{Spektrum AR620 DSMX 6-Channel Sport Receiver} & 8 \\ \hline
-            \href{https://arrishobby.com/emax-es08ma-ii-12g-mini-metal-gear-analog-servo-p0842.html?VariantsId=12700}{EMAX ES08MA II ANALOG METAL GEAR MICRO SERVO} & 36 \\ \hline
-            Winglet  & 91  \\ \hline
-            Wing & 660 \\ \hline
-            Vial & 5 \\ \hline
-            \textbf{Total} & 1148 \\ \hline
-        \end{tabular}
-        \end{table}
-        
-        The COTS parts were gathered from their specified weights. For the wing's mass estimates, the planform area was found to be 697 in$^2$ . Therefore, for the wing, from our given mass per area was 0.033 oz/in$^2$, the weight is 660 grams. For the winglets, the planform area was 26.75 in$^2$ and the mass per area is 0.06 oz/in$^2$. And since there are two winglets, their mass in total is estimated to be 91 grams.
-        
-        The total mass of the aircraft is 1148 grams which is about 2.5 lbs. The final wing loading based on the planform area and the total weight, the wing loading is about 0.057 oz/in$^2$. This design is currently below to the weight limit of 3 lbs. 
-    \subsection{Kenneth}
-        
-        \begin{table}[H]
-        \begin{tabular}{|c|c| } % set column nums and width
-            \hline \textbf{Component} & \textbf{Mass (g)} \\ \hline % column headers
-            \href{https://www.amazon.com/Brushless-Outrunner-Multicopters-Helicopter-Control/dp/B08MKQFSVF/ref=asc_df_B08MKQFSVF/?tag=hyprod-20&linkCode=df0&hvadid=475795164185&hvpos=&hvnetw=g&hvrand=9902342740412303481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-1195392311214&th=1}{GFORCE E480 BRUSHLESS OUTRUNNER MOTOR (3530 - 1100KV)} & 100 \\ \hline
-            \href{http://www.valuehobby.com/gforce-40a-esc.html}{GFORCE 40A BRUSHLESS ESC (T-CONNECTOR)} & 35 \\ \hline
-            \href{http://www.valuehobby.com/30c-2200mah-3s-t.html}{GFORCE 30C 2200MAH 3S 11.1V LIPO (T-CONNECTOR)} & 186 \\ \hline
-            \href{https://www.masterairscrew.com/products/electric-only-12x6-propeller?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google\%20Shopping&gclid=CjwKCAiA9aKQBhBREiwAyGP5laqPgb8z2BGon5sD8qHYRZQVab7IcA0DZg8DOcFMsDTccBgRqirzgBoC1wkQAvD_BwE}{Electric Only - 12x6 Propeller} & 27 \\ \hline
-            \href{https://www.horizonhobby.com/product/ar620-dsmx-6-channel-sport-receiver/SPMAR620.html?gclid=CjwKCAiA9aKQBhBREiwAyGP5lX6-hyQKl87DI0WH0pgWG2HS0woZKcd-L2bMRS_qWmVI1fLqpeCX0BoCrRAQAvD_BwE}{Spektrum AR620 DSMX 6-Channel Sport Receiver} & 8 \\ \hline
-            \href{https://arrishobby.com/emax-es08ma-ii-12g-mini-metal-gear-analog-servo-p0842.html?VariantsId=12700}{EMAX ES08MA II ANALOG METAL GEAR MICRO SERVO} & 36 \\ \hline
-            Vertical Stabilizer  & 32 \\ \hline
-            Wing & 382 \\ \hline
-            Fuselage & 712 \\ \hline
-            Vial & 5 \\ \hline
-            \textbf{Total} & 1523 \\ \hline
-        \end{tabular}
-        \end{table}
-        
-        For COTS components, the mass values were determined by the given product specifications. The components have been hyperlinked for ease of reference. For the wing mass estimates, planform area was found to be 408 in$^2$, therefore determining the mass via the given mass per area of 0.033 oz/in$^2$. A similar approach was done with the vertical stabilizer with a planform area of 18.9 in$^2$ with a given mass per area of 0.06 oz/in$^2$. These were properly converted to grams after calculation. To calculate the mass of the fuselage, the density for Depron foam was asserted within the model which utilizes the volume to determine the mass of the component.
-        
-        For the final weight of the aircraft, it was around 1523 g which is about 3.3 lbs. The final wing loading based on the surface area of the wing (also accounting for units) is roughly 0.13 oz/in$^2$. This puts the design slightly overweight, but the fuselage is likely the culprit as the mass overage since it was estimated as a solid component, where in reality, it is made of mostly empty space to reduce the mass. 
-        
-    \subsection{Jeffery}
+    % Anshuk
+    \subsection{Full Assembly}
+    % A fully assembled drawing showing the locations of all the parts and overall dimensions of key elements of the aircraft when it is put together. This should be presented both as a 3 view and isometric view drawing with all the parts named on the drawing.
     
-    \begin{table}[H]
-        \begin{tabular}{|c|c| } % set column nums and width
-            \hline \textbf{Component} & \textbf{Mass (g)} \\ \hline % column headers
-            \href{https://www.amazon.com/Brushless-Outrunner-Multicopters-Helicopter-Control/dp/B08MKQFSVF/ref=asc_df_B08MKQFSVF/?tag=hyprod-20&linkCode=df0&hvadid=475795164185&hvpos=&hvnetw=g&hvrand=9902342740412303481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-1195392311214&th=1}{GFORCE E480 BRUSHLESS OUTRUNNER MOTOR (3530 - 1100KV)} & 100 \\ \hline
-            \href{http://www.valuehobby.com/gforce-40a-esc.html}{GFORCE 40A BRUSHLESS ESC (T-CONNECTOR)} & 35 \\ \hline
-            \href{http://www.valuehobby.com/30c-2200mah-3s-t.html}{GFORCE 30C 2200MAH 3S 11.1V LIPO (T-CONNECTOR)} & 186 \\ \hline
-            \href{https://www.masterairscrew.com/products/electric-only-12x6-propeller?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google\%20Shopping&gclid=CjwKCAiA9aKQBhBREiwAyGP5laqPgb8z2BGon5sD8qHYRZQVab7IcA0DZg8DOcFMsDTccBgRqirzgBoC1wkQAvD_BwE}{Electric Only - 12x6 Propeller} & 27 \\ \hline
-            \href{https://www.horizonhobby.com/product/ar620-dsmx-6-channel-sport-receiver/SPMAR620.html?gclid=CjwKCAiA9aKQBhBREiwAyGP5lX6-hyQKl87DI0WH0pgWG2HS0woZKcd-L2bMRS_qWmVI1fLqpeCX0BoCrRAQAvD_BwE}{Spektrum AR620 DSMX 6-Channel Sport Receiver} & 8 \\ \hline
-            \href{https://arrishobby.com/emax-es08ma-ii-12g-mini-metal-gear-analog-servo-p0842.html?VariantsId=12700}{EMAX ES08MA II ANALOG METAL GEAR MICRO SERVO} & 36 \\ \hline
-            Fuselage  & 15.79  \\ \hline
-            Wing & 538.641 \\ \hline
-            Vial & 5 \\ \hline
-            \textbf{Total} & 951.431 \\ \hline
-        \end{tabular}
-        \end{table}
-        
-        The COTS components of this aircraft can be found by the given specifications and the desired vehicle performances from the user of this aircraft. For the wing's platform area, it was found that $578.016$ in$^2$ would provide sufficient payload capacity for the aircraft. Therefore, given a desired wing loading of 20 oz/ft $^2$, this configuration could provide a wing loading of $0.1389$ oz/in$^2$ with a maximum take off weight of $80.27$ oz. For the given mass per area of the wing of 0.033 oz/in$^2$, the total weight of the wing is $538.641$ g. 
-        
-        Using the density of depron foam and the volume of the fuselage obtained from Siemens NX, it is found that the total weight of the fuselage is 15.79 g. Since this aircraft does not have a vertical tail or stabilizer, there is no additional mass required for those components. As shown in the table above, the total weight of the aircraft is 951.431 grams which is about 2.1 lbs which is well below the weight limit of 3lbs. 
+    % Kenneth
+    \subsection{Equipment Locations}
+    % A fully assembled drawing showing the locations of the equipment and instrumentation (components you buy and don’t fabricate like the receiver, servos, motor, battery, camera, video transmitter, ESC, etc.) on or within the airframe with key dimensions given for placement. This should be presented both as a 3 view and isometric view drawing and it may be useful to use cut-away views in some cases to better show where equipment/components are located.
+    
+    % George
+    \subsection{Exploded View}
+    % An isometric exploded view assembly drawing with all the fabricated parts and purchased components labeled. No dimensions are needed for this drawing.
+    % Theses drawings will be graded on how well and detailed you present your design. Include table of the characteristics of the tail and wing (airfoils, aerodynamic centers, S, MAC, sweep, taper, root chord, tip cord, twist, tail length etc.).
+    
+    % Kenneth
+    \subsection{Design Overview}
+    % Write a brief paragraph describing your design and the drawings presented.
+    
+        The aircraft was designed as a flying wing with tall winglets to add yaw stability to the flight. These winglets are secured with epoxied dowels to firmly secure the two components together. The main wing is assembled onto two carbon fiber spars. These lengths were determined based on the available at the source provided for carbon fiber tube purchases. Many of the components were mounted into the wing underneath to reduce protrusions throughout the body of the aircraft. Holes for servos, receiver, motor mount, battery, and vial mechanism all have cutouts to mount these components inside. Control surfaces and their actuators were included in the design to further increase the fidelity of model. A preliminary design of the hand holder was also included, with plans to refine the model in the future to incorporate throwing mechanics and ergonomics.
 
-\section{Vehicle Concept Evaluation}
-% The group should evaluate each vehicle design writing down, as bulleted items, how well each design meets the bulleted items in question one. Also write down (bullet points) three major Pros and three major Cons for each design.
+% Anshuk    
+\section{Vial Release Mechanism}
+% Using figures and sentences/paragraphs describe your mechanism to release the protective vial described in the problem statement (cylinder 0.75” in diameter, 1.5” long and a mass of 5 grams) and how it works. What are the benefits and possible concerns you have with your design?
 
-    \subsection{Anshuk}
-        \begin{itemize}
-            \item Meeting objectives
-            \begin{itemize}
-                \item \textbf{Max Thickness (3):} Met
-                \item \textbf{Max Wingspan (1):} Met
-                \item \textbf{Max Weight (3):} Met
-            \end{itemize}
-            \item Pros
-            \begin{itemize}
-                \item Large volume with easy access to vial and batteries
-                \item Wing aspect ratio of 7, optimal for sport gliders
-                \item Bump is ideal for sensor and vial placement
-            \end{itemize}
-            \item Cons
-            \begin{itemize}
-                \item Lack of yaw stability due to absence of vertical stabilizers or winglets
-                \item Difficult manufacturing of the storage bump
-                \item Aft heavy
-            \end{itemize}
-        \end{itemize}
+        The team decided to use a vial mechanism that was simple in design with minimal use of heavy parts or complex actuator mechanisms. The design was also kept within a size constraint so that the design would fit in front of the spars, helping keep the Center of Gravity in front of the Center of Pressure. 
         
+        The design includes a 3D-printed plate that is connected to a servo arm placed next to the plate. The plate acts as a trap door at the bottom of the aircraft.The vial is placed on the flat plate in an upright position. When the servo actuates, the flat plate rotates with it away from the bottom and creates an opening out of the plane. The vial then falls out of the plane to be caught by someone on the ground.
         
-    \subsection{George}
-        \begin{itemize}
-            \item Meeting objectives
-            \begin{itemize}
-                \item \textbf{Max Thickness (3):} Met
-                \item \textbf{Max Wingspan (1):} Met
-                \item \textbf{Max Weight (3):} Met
-            \end{itemize}
-            \item Pros
-            \begin{itemize}
-                \item Can store components in wing volume
-                \item Has yaw stability
-                \item Manufacturing main wing is relatively easy
-            \end{itemize}
-            \item Cons
-            \begin{itemize}
-                \item Weight will be too far rearwards
-                \item Difficulty to manufacture winglets
-                \item Difficult to hand launch with propeller at back (Don't get your hand caught Professor)
-            \end{itemize}
-        \end{itemize}
-    \subsection{Kenneth}
+        Figure   shows the vial release mechanism assembly on its own and Figures   and     shows the vial release assembly on the underside of the wing in the aircraft in both the open and closed configurations respectively.
         
-        \begin{itemize}
-            \item Meeting objectives
-            \begin{itemize}
-                \item \textbf{Max Thickness (3):} Met
-                \item \textbf{Max Wingspan (1):} Met
-                \item \textbf{Max Weight (3):} Not met
-            \end{itemize}
-            \item Pros
-            \begin{itemize}
-                \item Manufacturability of vertical stabilizer, fuselage
-                \item Tractor configuration puts masses forward
-                \item Lots of volume for components
-            \end{itemize}
-            \item Cons
-            \begin{itemize}
-                \item Manufacturability of the wings (too high aspect ratio)
-                \item Structural stability of the wings (spars don't go all the way through)
-                \item Overweight
-            \end{itemize}
-        \end{itemize}
-        
-    \subsection{Jeffery}
-    \begin{itemize}
-            \item Meeting objectives
-            \begin{itemize}
-                \item \textbf{Max Thickness (3):} Met
-                \item \textbf{Max Wingspan (1):} Met
-                \item \textbf{Max Weight (3):} Met
-            \end{itemize}
-            \item Pros
-            \begin{itemize}
-                \item Can store components in the fuselage
-                \item Very light weight 
-                \item Has high maximum payload capacity 
-            \end{itemize}
-            \item Cons
-            \begin{itemize}
-                \item The center of gravity is too far rearwards
-                \item Fuselage not large enough to accommodate larger payload
-                \item No yaw stability control
-            \end{itemize}
-        \end{itemize}
+        This design involves only one moving part connected to the servo, and so was chosen for its simplicity and ease of building. The only harnessing required in this design would be for the servo, because the plate is attached to the servo itself and the vial sits freely. The primary concern is ensuring that we cut the foam around the mechanism in the right way to account for the rotation of the flat plate. The team plans on fixing this concern by making the CAD accurate and fixing any tolerance issues so we can cut the fuselage foam accordingly.
+    
 
-\section{Proposed Designs}
-% Get together virtually as a group and propose the top 2 designs for the mission described in the problem statement. Describe why these were selected as the best designs by the group. Be prepared to discuss all of the designs and the preferred designs in the group meeting on Monday (02/07/2022).
+% Jeff
+\section{Free-Body Diagram}
+% Using the weights and positions of all components (i.e. instrumentation, servos, motor, battery etc.) draw a free body diagram (using the CAD package) and calculate a force and moment balance using an appropriate reference point. Calculate the center of gravity of all the fabricated parts and components and list their coordinates relative to an appropriate reference point. Calculate the weight and center of gravity of the entire vehicle and write a short paragraph describing your analysis.
 
-    \subsection{Design 1}
-        
-        Kenneth's design was selected as one of the top designs. This design includes a tractor motor position which will allow for a much easier mass distribution within the aircraft itself. In any aircraft design, the center of gravity should be in front of the neutral point and this design allows for this. Another reason this design was chosen was due to its overall stability. The inclusion of a vertical stabilizer allows for yaw stability as well as the sweeping nature of the wings.
-    
-        We do still need to have some adjustments to the overall design in the name of manufacturability and weight saving. The fuselage needs to be manufactured in a way where it is mostly a hollow shell rather than a solid block of foam. Also, the aspect ratio of the wings is too high and will need to be decreased. In doing this, we will decrease the sweep of the wings and it allows us to a horizontal spar that spans much more of the wingspan than the current design. 
-    
-        Overall, this design offered a unique solution to the other proposed designs and with some alterations and design iterations, this will be a viable and well-engineered flying wing.
-    
-    \subsection{Design 2}
-    
-        George's design was the other design that was selected. This design was similar to both Jeff's and Anshuk's designs but also included winglets which the team was excited to include. This design includes a pusher motor location which offers some difficulty in arranging the center of gravity in front of the neutral point, but due to the lack of a fuselage, the team believes much of the equipment can be placed in the forward end of the wing. Taking inspiration from Jeff and Anshuk's designs, a small addition like a "semi-fuselage" can be made that attaches itself to the bottom of the wings and can be used to store electronics and payload. The stability offered by the sweep of the aircraft and winglets is another reason for choosing this design. The ability to make the aircraft structurally sound with the fact that the planform area is so large is a benefit.
-    
-        There will need to be some design adjustments due to manufacturing. The winglet still where it directly molds from the main wing and the tip of the winglet sweep far back is also quite hard to manufacture. The sweeping nature of the winglet was done purely for aesthetic reasons and is not expected to hurt the performance of the aircraft. 
-    
-        Overall, this design offers a different design than Kenneth's design. It will need to be evaluated to see which design proves to have better performance as each of the designs evolve.
+% Jeff
+\section{Prominent Forces}
+% Based on your drawing write a short description indicating how the major forces and moments (i.e. weights, aerodynamic forces/moments, thrust etc.) will be structurally supported by your airframe design. Feel free to use neat simplified sketches and analysis to indicate how the stresses are carried by the airframe structure. Indicate the major regions of where stress concentrations may be the largest concern in your design.
 
-\section{Group Member Contributions}
-% Make a table indicating how each group member contributed to the report
+% Max
+\section{Design Characteristics}
+% Provide tables of the characteristics [dimensions, airfoils, planform area, span, chord lengths, dihedral (if any), taper ratio, sweep, mean aerodynamic chord, root and mean chord length, elevon size (span and % chord), aerodynamic center and winglet or vertical stabilizer size (chord lengths, taper ratio etc.). write a short paragraph or two describing the process you used to determine the size and shape of the wing, elevons, and winglets. Justify why the wing elevons and winglets are the size and shape you have described. Also justify why you selected the airfoils that you are using.
 
-    \begin{table}[H]
-        \begin{center}
-        \begin{tabular}{ | p{2in} | p{4in}| } 
-            \hline
-            \textbf{Group Member} & \textbf{Contribution} \\  \hline
-            Anshuk Chigullapalli & Authored individual design and evaluation section, fact and numerical values checking of all sections, paper editing\\ \hline
-            George Petrov & Authored Proposed Designs, individual design and evaluation \\ \hline
-            Kenneth Tochihara & Authored Objectives and Constraints, individual design and evaluation\\ \hline
-            Jeffery Zhou & Authored individual design and evaluation section\\ \hline
-        \end{tabular}
-        \end{center}
-    \end{table}
+\begin{center}
+\begin{tabular}{c|c} 
+ \hline
+ Characteristic & Value \\
+ \hline\hline
+ Wingspan & 69.5 inches\\
+ \hline
+ Length & 22.07 in\\
+ \hline
+ Airfoil & NACA 23012\\
+ \hline
+ Planform Area & 748 in^2\\
+ \hline
+ Root Chord Length & 14.5 in\\
+ \hline
+ Tip Chord Length & 7.5 in\\
+ \hline
+ Taper Ratio & 6.182\\
+ \hline
+ Sweep & 22.019 $\degree$\\
+ \hline
+ Mean Aerodynamic Chord &  11.371 in\\
+ \hline
+ Aerodynamic Center & 9.635 in\\
+ \hline
+ Elevon Span & 17 in\\
+ \hline
+ Elevon Chord Percentage & 20$\percent$ \\
+ \hline
+ Winglet Area & 30 $\text{in}^2$ each\\
+ \hline
+ Winglet Airfoil & NACA 0010 \\
+ \hline
+\end{tabular}
+\end{center}
 
-\includepdf[pages=-,angle=90]{../anshuk/HW2_Drawing.pdf}
-\includepdf[pages=-,angle=90]{../george/Drawings/gpetrov2_vehicle_concept_george_assy.pdf}
-\includepdf[pages=-,angle=90]{../kenneth/ktt3_aircraft.pdf}
-\includepdf[pages=-,angle=90]{../jeffery/Drawings/shijunz2_wing_Jeffery.pdf}
-    
+We decided the size and shape of the wing based on a few factors. The first choice we made was in the wing span as we wanted to have the widest wings allowable to produce the most effective lift we could with our design. We then decided we wanted at least 20 $\degree$ of sweep in our wing to ensure that we had adequate yaw stability without having to include massive winglets in our design. Having these two quantities specified, we chose the airfoil in concert with choosing the root chord length of our plane, as we wanted to use the entire thickness allotted so that we would be able to fit a majority of the components within the wing and without the need for an additional fuselage. We chose the NACA 23012 airfoil because we wanted an airfoil with 1-2 $\degree$ of chamber and this airfoil looked like it would give us a large internal volume for our internal components. The mean chord length was chosen based on the thickness of the NACA 23012 so give us 1.75 inches of thickness. We also found in testing that the NACA 23012 also has a center of pressure that is farther back that other airfoils we tested, proving useful with our pusher motor configuration and subsequent COG. The tip chord length was set at 7.5 to give us sufficient room to attach adequately sized winglets. \\
+
+After having chosen our wing design, we moved on to designing the winglets of our UAV. Since we had already determined a sweep over 20 $\degree$ we did not need to create large winglets. We decided on an area of 30 $\text{in}^2$ to generate some more lateral stability without adding too much weight to the ends of our wings. As for the elevons, we wanted to incorporate about 50$\percent$ of the wingspan, set to the outside for increased leverage about the center line of our design. We also saw literature that suggested at least $\frac{1}{8}$ of the chord length to be taken up by the elevon, so we went with 15$\percent$ to ensure we have enough area to effectively control our UAV.
+
+
+% Max
+\section{Flight Characteristics}
+% Write a paragraph and present calculations/analysis Indicating why your CG is located appropriately to achieve stability. Hint: Evaluate the longitudinal static margin of your simplified aircraft (i.e. wing without the winglets or vertical stabilizer) using XFLR5 and locating the neutral point. Also give conceptual arguments of the aircrafts lateral and directional stability. In addition to where you have placed the battery show that it can be adjusted along the axis (i.e. if possible it is good to allow the battery to be placed over the quarter chord (MAC) location on the wing). Provide a table of the overall geometric and flight characteristics of your aircraft (neutral point, SM, design α, design velocity, overall weight, etc.) and your best estimate velocity and angle of attack when hand launched. From your analysis provide graphs of (CD, CL, CL/CD, CM, vs. α) and describe their characteristics and what you conclude from them. Be sure to include paragraphs describing these results as they are presented and justifying your decisions.
+
+% Max
+\section{Mass Estimates}
+% Calculate the total weight of your aircraft (including the battery, motor, and vial delivery system) and describe how you determined it. What is the power to weight ratio and wing loading of your aircraft? Write a paragraph describing your analysis.
+
+\begin{center}
+\begin{tabular}{c|c} 
+ \hline
+ Component & Weight \\
+ \hline\hline
+ Main Wings & 710g \\
+ \hline
+ Winglets & 66g \\
+ \hline
+ All equipment & 581g \\
+ \hline
+ Total Weight & 1.357kg \\
+ \hline
+\end{tabular}
+\end{center}
+
+We went about calculating the weight using the features XFLR5 provides for weighting. We estimated the mass of the wings and winglets by using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once we had these figures we were able to move on to the point masses in our aircraft which represent all the components and bracing that we are going to put into it. These were added in XFLR5 with placement as according to our CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. \\
+
+The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. We went to an R/C hobby website where there was a power vs. voltage and amperage table. For this determination we will assume that the battery will be outputting 11.1V and 24 amps. With these values our motor will be outputting 266.4 watts. Using this power and our weight of 1,357 grams we were able to determine that our UAV will have a power to weight ratio of 5.09 g/W.
+
+\include{homeworks/homework4/report/appendix}
+
 \end{document}
