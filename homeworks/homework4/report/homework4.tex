@@ -187,9 +187,9 @@
     \end{center}
     \end{table}
 
-    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was desired in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length of our plane, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with our pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. 
+    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was desired in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with our pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. \\
 
-    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 in$^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to choose the elevon to chord ratio which stated that the chord shall be a range of 16\% to 20\%. 18\% was then chosen for this ratio.
+    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 in$^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. The airfoil chosen for the winglets was the NACA 0010 as this airfoil does not have any chamber and would more effectively provide yaw stability. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to choose the elevon to chord ratio which stated that the chord shall be a range of 16\% to 20\%. 18\% was then chosen for this ratio.
 
 
 % Max
@@ -200,9 +200,16 @@ The team completed the XFLR5 model of the UAV both with and without winglets, wi
 
 The design will inherently be very stable in the lateral and directional realm due to the sweep, winglets, and mass symmetry about the central axis. The sweep of the wings and the winglets will combine to provide ample yaw stability, while the mass symmetry will eliminate any moments about that center axis and provide the inherent roll stability.
 
-The battery is placed as far forward as possible given the thickness of the front of the airfoil. If for any reason we needed to move that point mass farther back within our design, we would be able to switch it with our vial release mechanism. This would move our ESC and servo (with a combined weight of ~75 g) up to 2.25 inches from the front and move our 180g battery back to 3.5 inches from the front. A picture of this area of the design is shown below, this 
+The battery is placed as far forward as possible given the thickness of the front of the airfoil. If for any reason we needed to move that point mass farther back within our design, we would be able to switch it with our vial release mechanism. This would move our ESC and servo (with a combined weight of ~75 g) up to 2.25 inches from the front and move our 180g battery back to 3.5 inches from the front. A picture of this area of the design is shown below, displaying that there is space for the battery to be moved if it were necessary.
 
-INSERT PICTURE OF LOCATION OF BATTERY AND ESC/SERVO LOCATION
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{homeworks/homework4/report/Figure/battery_location.png}
+    \caption{This image displays the room to move the battery if necessary.}
+    \label{fig:Battery Location}
+\end{figure}
+
+The majority of the flight characteristics were determined from analysis of the design as modeled in XFLR5. The design that was analyzed did not include the winglets as these caused errors due to interactions with the lift of the wing. The Neutral Point and Center of Gravity were given in the XFLR5 analysis. The design $\alpha$ was chosen as this angle gave a large increase in the lift of the wing over smaller angles, yet the drag is not as large as the higher angles of attack. The Design velocity was chosen from the requirements for the plane design, as it was stated that the minimum top speed should be 40 mph. All of the corresponding flight characteristics in the table were found using a flight analysis of the design at the state design $\alpha$ and velocity of 1$\degree$ and 40mph respectively. The launch velocity is a conservative estimate assuming that the launcher will be able to throw the UAV with one hand similar to a football. The launch angle of 7.5$\degree$ will provide sufficient lift at this low speed and can easily be adjusted by the thrower raising or lowering their aim.
 
 \begin{table}[H]
         \begin{center}
@@ -227,6 +234,8 @@ INSERT PICTURE OF LOCATION OF BATTERY AND ESC/SERVO LOCATION
     \end{table}
 
 
+
+
 % Max
 \section{Mass Estimates}
 % Calculate the total weight of your aircraft (including the battery, motor, and vial delivery system) and describe how you determined it. What is the power to weight ratio and wing loading of your aircraft? Write a paragraph describing your analysis.
@@ -246,9 +255,9 @@ INSERT PICTURE OF LOCATION OF BATTERY AND ESC/SERVO LOCATION
         \end{center}
     \end{table}
 
-    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that are to be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. 
+    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that are to be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. \\
     
-    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. A power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1V and 24 amps was assumed. With these values the motor will be outputting 266.4 watts. Using this power and the aircraft weight of 1,357 grams, a power to weight ratio of 5.09 g/W was determined.
+    The wing loading of the design is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. A power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1V and 24 amps was assumed. With these values the motor will be outputting 266.4 watts. Using this power and the aircraft weight of 1,357 grams, a power to weight ratio of 5.09 g/W was determined.
 
 \include{homeworks/homework4/report/appendix}
 
