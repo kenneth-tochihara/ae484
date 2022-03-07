@@ -32,7 +32,7 @@
     \subsection{Fabrication Drawings}
     % Detail 3 view drawings (or two views when appropriate) view drawings of all fabricated components sufficiently dimensioned for manufacturing. Note that complex curves such as airfoils can show overall dimensions (like the chord length and thickness) with a leader and note to the surface indicating that the curve will be provided electronically. Be sure to name all parts and indicate the quantity and material they are made out of.
     
-    The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
+        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
     
     % insert images of the dimensioned drawings? Or create an appendix
     
@@ -52,44 +52,48 @@
     \subsection{Full Assembly}
     % A fully assembled drawing showing the locations of all the parts and overall dimensions of key elements of the aircraft when it is put together. This should be presented both as a 3 view and isometric view drawing with all the parts named on the drawing.
     
-    The team assembled all the individual components together in Siemens NX and created the full aircraft engineering drawing, provided in the Appendix. The overall dimensions are provided in the table below.
-    
+    The team assembled all the individual components together in Siemens NX and created the full aircraft engineering drawing, provided in Appendix B. The overall dimensions are provided in the table below.
     
     % Create a table with the overall dimensions
-    
     
     % Kenneth
     \subsection{Equipment Locations}
     % A fully assembled drawing showing the locations of the equipment and instrumentation (components you buy and don’t fabricate like the receiver, servos, motor, battery, camera, video transmitter, ESC, etc.) on or within the airframe with key dimensions given for placement. This should be presented both as a 3 view and isometric view drawing and it may be useful to use cut-away views in some cases to better show where equipment/components are located.
     
-        % 1. Reciever
-        % 2. Vial Servo
-        % 3. Motor
-        % 4. Battery
-        % 5. ESC
-        % 6. +Y Elevon Servo
-        % 7. -Y Elevon Servo
-    \begin{table}[H]
-    \begin{center}
-    \caption{\textbf{Component Locations}} \label{tab:component_locations}
-    \begin{tabular}{|c|c|} 
-        \hline
-        \textbf{No.} & \textbf{Component} \\ \hline
-        1 & Reciever \\ \hline
-        2 & Vial Servo \\ \hline
-        3 & Motor \\ \hline
-        4 & Battery \\ \hline
-        5 & ESC \\ \hline
-        6 & +Y Elevon Servo \\ \hline
-        7 & -Y Elevon Servo \\ \hline
-    \end{tabular}
-    \end{center}
-    \end{table}
+        In Figure \ref{fig:component_locations}, locations of all commercial components are labeled in Table \ref{tab:component_locations}. Appendix B, shows the full engineering drawing of the render.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_underbelly_labeled.png}
+            \caption{\textbf{Aircraft Commercial Component Locations}}
+            \label{fig:component_locations}
+        \end{figure}
+        
+        \begin{table}[H]
+        \begin{center}
+        \caption{\textbf{Component Locations}} \label{tab:component_locations}
+        \begin{tabular}{|c|c|} 
+            \hline
+            \textbf{No.} & \textbf{Component} \\ \hline
+            1 & Reciever \\ \hline
+            2 & Vial Servo \\ \hline
+            3 & Motor \\ \hline
+            4 & Battery \\ \hline
+            5 & ESC \\ \hline
+            6 & +Y Elevon Servo \\ \hline
+            7 & -Y Elevon Servo \\ \hline
+        \end{tabular}
+        \end{center}
+        \end{table}
+        
+        Spars are also included in the design that are purchased commercially but are not visible in the render above. 24 and 36 in spars are purchased and used directly in the design. 
     
     % George
     \subsection{Exploded View}
     % An isometric exploded view assembly drawing with all the fabricated parts and purchased components labeled. No dimensions are needed for this drawing.\
-    Below, an exploded view render of all the components can be seen. Appendix \ref{ApxB}, shows the full engineering drawing of the render below.
+    
+        In Figure \ref{fig:exploded}, an exploded view render of all the components can be seen. Appendix B, shows the full engineering drawing of the render below.
+        
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_exploded.png}
@@ -165,16 +169,16 @@
         Mean Aerodynamic Chord (in) &  11.371 \\ \hline
         Aerodynamic Center (in) & 9.635 \\ \hline
         Elevon Span (in) & 17 \\ \hline
-        Elevon Chord Percentage (\%) & 20 \\ \hline
+        Elevon Chord Percentage (\%) & 18 \\ \hline
         Winglet Area (in$^2$) & 30 \\ \hline
         Winglet Airfoil & NACA 0010 \\
         \hline
     \end{tabular}
     \end{center}
 
-    We decided the size and shape of the wing based on a few factors. The first choice we made was in the wing span as we wanted to have the widest wings allowable to produce the most effective lift we could with our design. We then decided we wanted at least 20 deg of sweep in our wing to ensure that we had adequate yaw stability without having to include massive winglets in our design. Having these two quantities specified, we chose the airfoil in concert with choosing the root chord length of our plane, as we wanted to use the entire thickness allotted so that we would be able to fit a majority of the components within the wing and without the need for an additional fuselage. We chose the NACA 23012 airfoil because we wanted an airfoil with 1-2 deg of chamber and this airfoil looked like it would give us a large internal volume for our internal components. The mean chord length was chosen based on the thickness of the NACA 23012 so give us 1.75 inches of thickness. We also found in testing that the NACA 23012 also has a center of pressure that is farther back that other airfoils we tested, proving useful with our pusher motor configuration and subsequent COG. The tip chord length was set at 7.5 to give us sufficient room to attach adequately sized winglets. 
+    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was wanted in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length of our plane, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with our pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. 
 
-    After having chosen our wing design, we moved on to designing the winglets of our UAV. Since we had already determined a sweep over 20 deg we did not need to create large winglets. We decided on an area of 30 $\text{in}^2$ to generate some more lateral stability without adding too much weight to the ends of our wings. As for the elevons, we wanted to incorporate about 50\% of the wingspan, set to the outside for increased leverage about the center line of our design. We also saw literature that suggested at least $\frac{1}{8}$ of the chord length to be taken up by the elevon, so we went with 15\% to ensure we have enough area to effectively control our UAV.
+    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 $\text{in}^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to chose the elevon to chord ratio which stated that the chord should be a range of 16$\%$ to 20$\%$. 18$\%$ was then chosen for this ratio.
 
 
 % Max
@@ -196,7 +200,7 @@
     \end{tabular}
     \end{center}
 
-    We went about calculating the weight using the features XFLR5 provides for weighting. We estimated the mass of the wings and winglets by using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once we had these figures we were able to move on to the point masses in our aircraft which represent all the components and bracing that we are going to put into it. These were added in XFLR5 with placement as according to our CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. 
+    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. 
     
     The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. We went to an R/C hobby website where there was a power vs. voltage and amperage table. For this determination we will assume that the battery will be outputting 11.1V and 24 amps. With these values our motor will be outputting 266.4 watts. Using this power and our weight of 1,357 grams we were able to determine that our UAV will have a power to weight ratio of 5.09 g/W.
 
