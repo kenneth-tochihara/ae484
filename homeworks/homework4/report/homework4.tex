@@ -32,7 +32,7 @@
     \subsection{Fabrication Drawings}
     % Detail 3 view drawings (or two views when appropriate) view drawings of all fabricated components sufficiently dimensioned for manufacturing. Note that complex curves such as airfoils can show overall dimensions (like the chord length and thickness) with a leader and note to the surface indicating that the curve will be provided electronically. Be sure to name all parts and indicate the quantity and material they are made out of.
     
-        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
+        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing, milling, or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
     
     % insert images of the dimensioned drawings? Or create an appendix
     
@@ -82,12 +82,12 @@
             5 & ESC \\ \hline
             6 & +Y Elevon Servo \\ \hline
             7 & -Y Elevon Servo \\ \hline
+            8 & 24 in spar \\ \hline
+            9 & 36 in spar \\ \hline
         \end{tabular}
         \end{center}
         \end{table}
         
-        Spars are also included in the design that are purchased commercially but are not visible in the render above. 24 and 36 in spars are purchased and used directly in the design. 
-    
     % George
     \subsection{Exploded View}
     % An isometric exploded view assembly drawing with all the fabricated parts and purchased components labeled. No dimensions are needed for this drawing.\
@@ -154,7 +154,9 @@
 \section{Design Characteristics}
 % Provide tables of the characteristics [dimensions, airfoils, planform area, span, chord lengths, dihedral (if any), taper ratio, sweep, mean aerodynamic chord, root and mean chord length, elevon size (span and % chord), aerodynamic center and winglet or vertical stabilizer size (chord lengths, taper ratio etc.). write a short paragraph or two describing the process you used to determine the size and shape of the wing, elevons, and winglets. Justify why the wing elevons and winglets are the size and shape you have described. Also justify why you selected the airfoils that you are using.
 
+    \begin{table}[H]
     \begin{center}
+    \caption{\textbf{Design Characteristics of Aircraft}} \label{table:design_char}
     \begin{tabular}{|c|c|} 
         \hline
         \textbf{Characteristic} & \textbf{Value} \\ \hline
@@ -175,10 +177,11 @@
         \hline
     \end{tabular}
     \end{center}
+    \end{table}
 
-    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was wanted in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length of our plane, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with our pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. 
+    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was desired in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length of our plane, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with our pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. 
 
-    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 $\text{in}^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to chose the elevon to chord ratio which stated that the chord should be a range of 16$\%$ to 20$\%$. 18$\%$ was then chosen for this ratio.
+    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 in$^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to choose the elevon to chord ratio which stated that the chord shall be a range of 16\% to 20\%. 18\% was then chosen for this ratio.
 
 
 % Max
@@ -189,20 +192,24 @@
 \section{Mass Estimates}
 % Calculate the total weight of your aircraft (including the battery, motor, and vial delivery system) and describe how you determined it. What is the power to weight ratio and wing loading of your aircraft? Write a paragraph describing your analysis.
 
-    \begin{center}
-    \begin{tabular}{|c|c|} 
-    \hline
-        \textbf{Component} & \textbf{Weight (g)} \\ \hline
-        Main Wings & 710 \\ \hline
-        Winglets & 66 \\ \hline
-        All equipment & 581 \\ \hline
-        \textbf{Total Weight} & \textbf{1357} \\ \hline
-    \end{tabular}
-    \end{center}
+    \begin{table}[H]
+        \begin{center}
+        \setstretch{1} 
+        \caption{\textbf{Weight of Aircraft Components}} \label{table:Weights}
+        \begin{tabular}{|p{1in}|p{1in}|} % set column nums and width 
+        \hline
+            \textbf{Component} & \textbf{Weight (g)} \\ \hline
+            Main Wings & 710 \\ \hline
+            Winglets & 66 \\ \hline
+            All equipment & 581 \\ \hline
+            \textbf{Total Weight} & \textbf{1357} \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{table}
 
-    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. 
+    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. 
     
-    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. We went to an R/C hobby website where there was a power vs. voltage and amperage table. For this determination we will assume that the battery will be outputting 11.1V and 24 amps. With these values our motor will be outputting 266.4 watts. Using this power and our weight of 1,357 grams we were able to determine that our UAV will have a power to weight ratio of 5.09 g/W.
+    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. An power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1V and 24 amps was assumed. With these values the motor will be outputting 266.4 watts. Using this power and the aircraft weight of 1,357 grams, a power to weight ratio of 5.09 g/W was determined.
 
 \include{homeworks/homework4/report/appendix}
 
