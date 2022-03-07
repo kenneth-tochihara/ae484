@@ -32,8 +32,10 @@
     \subsection{Fabrication Drawings}
     % Detail 3 view drawings (or two views when appropriate) view drawings of all fabricated components sufficiently dimensioned for manufacturing. Note that complex curves such as airfoils can show overall dimensions (like the chord length and thickness) with a leader and note to the surface indicating that the curve will be provided electronically. Be sure to name all parts and indicate the quantity and material they are made out of.
     
-        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing, milling, or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
+        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and cutouts for them, the elevons (and their actuator holders), the hand-holds, the motor retainer and and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing, milling, or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
     
+    
+        Table \ref{table:fab_components} provides the details of all the fabricated components such as their quantity and the material used.
     % insert images of the dimensioned drawings? Or create an appendix
     
     % add a table of all the fabricated parts
@@ -43,7 +45,13 @@
          \caption{\textbf{Fabricated Components}} \label{table:fab_components}
          \begin{tabular}{|p{2in}|p{1in}|p{1in}|p{1in}|} % set column nums and width
              \hline \textbf{Component} & \textbf{Quantity} & \textbf{Material} & \textbf{Comments} \\ \hline % column headers
-             Wing & 2 & Foam & bruh \\ \hline
+             Wing & 2 & Foam & Cutouts in the wing's foam are crucial and house all the flight critical components \\ \hline
+             Elevon Actuator Holder & 2 & 3D Printed PLA & Connects the actuator rod to the elevon \\ \hline
+             Trap Door & 1 & 3D Printed PLA & Part of Vial Release Mechanism \\ \hline
+             Hand Holds & 2 & Foam + Composite & Allows for holding vehicle for hand launch \\ \hline
+             Winglets & 2 Foam + Compsite & Attached to the primary wing using dowels \\  \hline
+             Motor Retainer & 3D Printed PLA & Attaches the motor to the wing \\ \hline
+             
          \end{tabular}
          \end{center}
      \end{table}
