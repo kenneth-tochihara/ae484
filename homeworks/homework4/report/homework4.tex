@@ -38,16 +38,15 @@
     
     % add a table of all the fabricated parts
     
- \begin{table}[H]
-     \begin{center}
-     \setstretch{1} 
-     \caption{\textbf{Fabricated Components}} \label{table:fab_components}
-     \begin{tabular}{|p{2in}|p{1in}|p{1in}|p{1in}|} % set column nums and width
-         \hline \textbf{Component} & \textbf{Quantity} & \textbf{Material} & \textbf{Comments} \\ \hline % column headers
-         Wing & 2 & Foam & bruh \\ \hline
-     \end{tabular}
-     \end{center}
- \end{table}
+     \begin{table}[H]
+         \begin{center}
+         \caption{\textbf{Fabricated Components}} \label{table:fab_components}
+         \begin{tabular}{|p{2in}|p{1in}|p{1in}|p{1in}|} % set column nums and width
+             \hline \textbf{Component} & \textbf{Quantity} & \textbf{Material} & \textbf{Comments} \\ \hline % column headers
+             Wing & 2 & Foam & bruh \\ \hline
+         \end{tabular}
+         \end{center}
+     \end{table}
     
     % Anshuk
     \subsection{Full Assembly}
@@ -63,11 +62,35 @@
     \subsection{Equipment Locations}
     % A fully assembled drawing showing the locations of the equipment and instrumentation (components you buy and don’t fabricate like the receiver, servos, motor, battery, camera, video transmitter, ESC, etc.) on or within the airframe with key dimensions given for placement. This should be presented both as a 3 view and isometric view drawing and it may be useful to use cut-away views in some cases to better show where equipment/components are located.
     
+        % 1. Reciever
+        % 2. Vial Servo
+        % 3. Motor
+        % 4. Battery
+        % 5. ESC
+        % 6. +Y Elevon Servo
+        % 7. -Y Elevon Servo
+    \begin{table}[H]
+    \begin{center}
+    \caption{\textbf{Component Locations}} \label{tab:component_locations}
+    \begin{tabular}{|c|c|} 
+        \hline
+        \textbf{No.} & \textbf{Component} \\ \hline
+        1 & Reciever \\ \hline
+        2 & Vial Servo \\ \hline
+        3 & Motor \\ \hline
+        4 & Battery \\ \hline
+        5 & ESC \\ \hline
+        6 & +Y Elevon Servo \\ \hline
+        7 & -Y Elevon Servo \\ \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+    
     % George
     \subsection{Exploded View}
     % An isometric exploded view assembly drawing with all the fabricated parts and purchased components labeled. No dimensions are needed for this drawing.\
-    Below, an exploded view render of all the components can be seen. 
-    \begin{figure}[H]
+    Below, an exploded view render of all the components can be seen. Appendix \ref{ApxB}, shows the full engineering drawing of the render below.
+        \begin{figure}[H]
             \centering
             \includegraphics[width=0.8\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_exploded.png}
             \caption{\textbf{Aircraft Exploded View}}
@@ -86,34 +109,34 @@
 \section{Vial Release Mechanism}
 % Using figures and sentences/paragraphs describe your mechanism to release the protective vial described in the problem statement (cylinder 0.75” in diameter, 1.5” long and a mass of 5 grams) and how it works. What are the benefits and possible concerns you have with your design?
 
-        The team decided to use a vial mechanism that was simple in design with minimal use of heavy parts or complex actuator mechanisms. The design was also kept within a size constraint so that the design would fit in front of the spars, helping keep the Center of Gravity in front of the Center of Pressure. 
-        
-        The design includes a 3D-printed plate that is connected to a servo arm placed next to the plate. The plate acts as a trap door at the bottom of the aircraft.The vial is placed on the flat plate in an upright position. When the servo actuates, the flat plate rotates with it away from the bottom and creates an opening out of the plane. The vial then falls out of the plane to be caught by someone on the ground.
-        
-        Figure \ref{fig:vial_assembly} shows the vial release mechanism assembly on its own and Figures \ref{fig:vial_closed} and \ref{fig:vial_open} shows the vial release assembly on the underside of the wing in the aircraft in both the open and closed configurations respectively.
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.65\textwidth]{homeworks/homework4/report/Figure/assembly_vial_door.png}
-            \caption{\textbf{Vial Release Mechanism}}
-            \label{fig:vial_assembly}
-        \end{figure}
-                
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.55\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_door_closed.png}
-            \caption{\textbf{Vial Mechanism in the Closed Configuration}}
-            \label{fig:vial_closed}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.55\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_door_open.png}
-            \caption{\textbf{Vial Mechanism in the Open Configuration}}
-            \label{fig:vial_open}
-        \end{figure}
-        
-        This design involves only one moving part connected to the servo, and so was chosen for its simplicity and ease of building. The only harnessing required in this design would be for the servo, because the plate is attached to the servo itself and the vial sits freely. The primary concern is ensuring that we cut the foam around the mechanism in the right way to account for the rotation of the flat plate. The team plans on fixing this concern by making the CAD accurate and fixing any tolerance issues so we can cut the fuselage foam accordingly.
+    The team decided to use a vial mechanism that was simple in design with minimal use of heavy parts or complex actuator mechanisms. The design was also kept within a size constraint so that the design would fit in front of the spars, helping keep the Center of Gravity in front of the Center of Pressure. 
+    
+    The design includes a 3D-printed plate that is connected to a servo arm placed next to the plate. The plate acts as a trap door at the bottom of the aircraft.The vial is placed on the flat plate in an upright position. When the servo actuates, the flat plate rotates with it away from the bottom and creates an opening out of the plane. The vial then falls out of the plane to be caught by someone on the ground.
+    
+    Figure \ref{fig:vial_assembly} shows the vial release mechanism assembly on its own and Figures \ref{fig:vial_closed} and \ref{fig:vial_open} shows the vial release assembly on the underside of the wing in the aircraft in both the open and closed configurations respectively.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\textwidth]{homeworks/homework4/report/Figure/assembly_vial_door.png}
+        \caption{\textbf{Vial Release Mechanism}}
+        \label{fig:vial_assembly}
+    \end{figure}
+            
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.55\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_door_closed.png}
+        \caption{\textbf{Vial Mechanism in the Closed Configuration}}
+        \label{fig:vial_closed}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.55\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_door_open.png}
+        \caption{\textbf{Vial Mechanism in the Open Configuration}}
+        \label{fig:vial_open}
+    \end{figure}
+    
+    This design involves only one moving part connected to the servo, and so was chosen for its simplicity and ease of building. The only harnessing required in this design would be for the servo, because the plate is attached to the servo itself and the vial sits freely. The primary concern is ensuring that we cut the foam around the mechanism in the right way to account for the rotation of the flat plate. The team plans on fixing this concern by making the CAD accurate and fixing any tolerance issues so we can cut the fuselage foam accordingly.
     
 % Jeff
 \section{Free-Body Diagram}
@@ -127,45 +150,31 @@
 \section{Design Characteristics}
 % Provide tables of the characteristics [dimensions, airfoils, planform area, span, chord lengths, dihedral (if any), taper ratio, sweep, mean aerodynamic chord, root and mean chord length, elevon size (span and % chord), aerodynamic center and winglet or vertical stabilizer size (chord lengths, taper ratio etc.). write a short paragraph or two describing the process you used to determine the size and shape of the wing, elevons, and winglets. Justify why the wing elevons and winglets are the size and shape you have described. Also justify why you selected the airfoils that you are using.
 
-\begin{center}
-\begin{tabular}{c|c} 
- \hline
- Characteristic & Value \\
- \hline\hline
- Wingspan & 69.5 inches\\
- \hline
- Length & 22.07 in\\
- \hline
- Airfoil & NACA 23012\\
- \hline
- Planform Area & 748 in^2\\
- \hline
- Root Chord Length & 14.5 in\\
- \hline
- Tip Chord Length & 7.5 in\\
- \hline
- Taper Ratio & 6.182\\
- \hline
- Sweep & 22.019 $\degree$\\
- \hline
- Mean Aerodynamic Chord &  11.371 in\\
- \hline
- Aerodynamic Center & 9.635 in\\
- \hline
- Elevon Span & 17 in\\
- \hline
- Elevon Chord Percentage & 20$\percent$ \\
- \hline
- Winglet Area & 30 $\text{in}^2$ each\\
- \hline
- Winglet Airfoil & NACA 0010 \\
- \hline
-\end{tabular}
-\end{center}
+    \begin{center}
+    \begin{tabular}{|c|c|} 
+        \hline
+        \textbf{Characteristic} & \textbf{Value} \\ \hline
+        Wingspan (in) & 69.5 \\ \hline
+        Length (in) & 22.07 \\ \hline
+        Airfoil & NACA 23012 \\ \hline
+        Planform Area (in$^2$) & 748 \\ \hline
+        Root Chord Length (in) & 14.5 \\ \hline
+        Tip Chord Length (in) & 7.5 \\ \hline
+        Taper Ratio & 6.182 \\ \hline
+        Sweep (deg) & 22.019 \\ \hline
+        Mean Aerodynamic Chord (in) &  11.371 \\ \hline
+        Aerodynamic Center (in) & 9.635 \\ \hline
+        Elevon Span (in) & 17 \\ \hline
+        Elevon Chord Percentage (\%) & 20 \\ \hline
+        Winglet Area (in$^2$) & 30 \\ \hline
+        Winglet Airfoil & NACA 0010 \\
+        \hline
+    \end{tabular}
+    \end{center}
 
-We decided the size and shape of the wing based on a few factors. The first choice we made was in the wing span as we wanted to have the widest wings allowable to produce the most effective lift we could with our design. We then decided we wanted at least 20 $\degree$ of sweep in our wing to ensure that we had adequate yaw stability without having to include massive winglets in our design. Having these two quantities specified, we chose the airfoil in concert with choosing the root chord length of our plane, as we wanted to use the entire thickness allotted so that we would be able to fit a majority of the components within the wing and without the need for an additional fuselage. We chose the NACA 23012 airfoil because we wanted an airfoil with 1-2 $\degree$ of chamber and this airfoil looked like it would give us a large internal volume for our internal components. The mean chord length was chosen based on the thickness of the NACA 23012 so give us 1.75 inches of thickness. We also found in testing that the NACA 23012 also has a center of pressure that is farther back that other airfoils we tested, proving useful with our pusher motor configuration and subsequent COG. The tip chord length was set at 7.5 to give us sufficient room to attach adequately sized winglets. \\
+    We decided the size and shape of the wing based on a few factors. The first choice we made was in the wing span as we wanted to have the widest wings allowable to produce the most effective lift we could with our design. We then decided we wanted at least 20 deg of sweep in our wing to ensure that we had adequate yaw stability without having to include massive winglets in our design. Having these two quantities specified, we chose the airfoil in concert with choosing the root chord length of our plane, as we wanted to use the entire thickness allotted so that we would be able to fit a majority of the components within the wing and without the need for an additional fuselage. We chose the NACA 23012 airfoil because we wanted an airfoil with 1-2 deg of chamber and this airfoil looked like it would give us a large internal volume for our internal components. The mean chord length was chosen based on the thickness of the NACA 23012 so give us 1.75 inches of thickness. We also found in testing that the NACA 23012 also has a center of pressure that is farther back that other airfoils we tested, proving useful with our pusher motor configuration and subsequent COG. The tip chord length was set at 7.5 to give us sufficient room to attach adequately sized winglets. 
 
-After having chosen our wing design, we moved on to designing the winglets of our UAV. Since we had already determined a sweep over 20 $\degree$ we did not need to create large winglets. We decided on an area of 30 $\text{in}^2$ to generate some more lateral stability without adding too much weight to the ends of our wings. As for the elevons, we wanted to incorporate about 50$\percent$ of the wingspan, set to the outside for increased leverage about the center line of our design. We also saw literature that suggested at least $\frac{1}{8}$ of the chord length to be taken up by the elevon, so we went with 15$\percent$ to ensure we have enough area to effectively control our UAV.
+    After having chosen our wing design, we moved on to designing the winglets of our UAV. Since we had already determined a sweep over 20 deg we did not need to create large winglets. We decided on an area of 30 $\text{in}^2$ to generate some more lateral stability without adding too much weight to the ends of our wings. As for the elevons, we wanted to incorporate about 50\% of the wingspan, set to the outside for increased leverage about the center line of our design. We also saw literature that suggested at least $\frac{1}{8}$ of the chord length to be taken up by the elevon, so we went with 15\% to ensure we have enough area to effectively control our UAV.
 
 
 % Max
@@ -176,25 +185,20 @@ After having chosen our wing design, we moved on to designing the winglets of ou
 \section{Mass Estimates}
 % Calculate the total weight of your aircraft (including the battery, motor, and vial delivery system) and describe how you determined it. What is the power to weight ratio and wing loading of your aircraft? Write a paragraph describing your analysis.
 
-\begin{center}
-\begin{tabular}{c|c} 
- \hline
- Component & Weight \\
- \hline\hline
- Main Wings & 710g \\
- \hline
- Winglets & 66g \\
- \hline
- All equipment & 581g \\
- \hline
- Total Weight & 1.357kg \\
- \hline
-\end{tabular}
-\end{center}
+    \begin{center}
+    \begin{tabular}{|c|c|} 
+    \hline
+        \textbf{Component} & \textbf{Weight (g)} \\ \hline
+        Main Wings & 710 \\ \hline
+        Winglets & 66 \\ \hline
+        All equipment & 581 \\ \hline
+        \textbf{Total Weight} & \textbf{1357} \\ \hline
+    \end{tabular}
+    \end{center}
 
-We went about calculating the weight using the features XFLR5 provides for weighting. We estimated the mass of the wings and winglets by using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once we had these figures we were able to move on to the point masses in our aircraft which represent all the components and bracing that we are going to put into it. These were added in XFLR5 with placement as according to our CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. \\
-
-The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. We went to an R/C hobby website where there was a power vs. voltage and amperage table. For this determination we will assume that the battery will be outputting 11.1V and 24 amps. With these values our motor will be outputting 266.4 watts. Using this power and our weight of 1,357 grams we were able to determine that our UAV will have a power to weight ratio of 5.09 g/W.
+    We went about calculating the weight using the features XFLR5 provides for weighting. We estimated the mass of the wings and winglets by using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once we had these figures we were able to move on to the point masses in our aircraft which represent all the components and bracing that we are going to put into it. These were added in XFLR5 with placement as according to our CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that we will use for the spars. We then added about 45 grams of additional weight that would account for any extra material we would use to connect our components back into the main spars. Given the wings, winglets, all equipment and extra weight we came in at about 0.02 pounds under our 3 pound limit. 
+    
+    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. We went to an R/C hobby website where there was a power vs. voltage and amperage table. For this determination we will assume that the battery will be outputting 11.1V and 24 amps. With these values our motor will be outputting 266.4 watts. Using this power and our weight of 1,357 grams we were able to determine that our UAV will have a power to weight ratio of 5.09 g/W.
 
 \include{homeworks/homework4/report/appendix}
 
