@@ -34,7 +34,6 @@
     
         The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and cutouts for them, the elevons (and their actuator holders), the hand-holds, the motor retainer and and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing, milling, or CNC machining. The engineering drawings for all the relevant components are provided in the Appendix.
     
-    
         Table \ref{table:fab_components} provides the details of all the fabricated components such as their quantity and the material used.
     % insert images of the dimensioned drawings? Or create an appendix
     
@@ -43,14 +42,15 @@
      \begin{table}[H]
          \begin{center}
          \caption{\textbf{Fabricated Components}} \label{table:fab_components}
-         \begin{tabular}{|p{2in}|p{1in}|p{1in}|p{1in}|} % set column nums and width
+         \begin{tabular}{|p{1.6in}|p{0.7in}|p{1in}|p{1.5in}|} % set column nums and width
              \hline \textbf{Component} & \textbf{Quantity} & \textbf{Material} & \textbf{Comments} \\ \hline % column headers
              Wing & 2 & Foam & Cutouts in the wing's foam are crucial and house all the flight critical components \\ \hline
              Elevon Actuator Holder & 2 & 3D Printed PLA & Connects the actuator rod to the elevon \\ \hline
              Trap Door & 1 & 3D Printed PLA & Part of Vial Release Mechanism \\ \hline
              Hand Holds & 2 & Foam + Composite & Allows for holding vehicle for hand launch \\ \hline
-             Winglets & 2 Foam + Compsite & Attached to the primary wing using dowels \\  \hline
-             Motor Retainer & 3D Printed PLA & Attaches the motor to the wing \\ \hline
+             Winglets & 2 & Foam + Compsite & Attached to the primary wing using dowels \\  \hline
+             Motor Retainer & 1 & 3D Printed PLA & Attaches the motor to the wing \\ \hline
+             
              
          \end{tabular}
          \end{center}
@@ -196,6 +196,37 @@
 \section{Flight Characteristics}
 % Write a paragraph and present calculations/analysis Indicating why your CG is located appropriately to achieve stability. Hint: Evaluate the longitudinal static margin of your simplified aircraft (i.e. wing without the winglets or vertical stabilizer) using XFLR5 and locating the neutral point. Also give conceptual arguments of the aircrafts lateral and directional stability. In addition to where you have placed the battery show that it can be adjusted along the axis (i.e. if possible it is good to allow the battery to be placed over the quarter chord (MAC) location on the wing). Provide a table of the overall geometric and flight characteristics of your aircraft (neutral point, SM, design α, design velocity, overall weight, etc.) and your best estimate velocity and angle of attack when hand launched. From your analysis provide graphs of (CD, CL, CL/CD, CM, vs. α) and describe their characteristics and what you conclude from them. Be sure to include paragraphs describing these results as they are presented and justifying your decisions.
 
+The team completed the XFLR5 model of the UAV both with and without winglets, with each model including the weights of all components in their respective placement. The final COG location for the UAV ended up being 9.8 inches from the front of the UAV as determined by the XFLR5 COG estimation. This was found to be sufficiently far forward as the COP of the design stays behind this point up until about 10$\degree$ AOA. This was as far forward as the COG could be placed while still fitting all the necessary components within the wing itself. 
+
+The design will inherently be very stable in the lateral and directional realm due to the sweep, winglets, and mass symmetry about the central axis. The sweep of the wings and the winglets will combine to provide ample yaw stability, while the mass symmetry will eliminate any moments about that center axis and provide the inherent roll stability.
+
+The battery is placed as far forward as possible given the thickness of the front of the airfoil. If for any reason we needed to move that point mass farther back within our design, we would be able to switch it with our vial release mechanism. This would move our ESC and servo (with a combined weight of ~75 g) up to 2.25 inches from the front and move our 180g battery back to 3.5 inches from the front. A picture of this area of the design is shown below, this 
+
+INSERT PICTURE OF LOCATION OF BATTERY AND ESC/SERVO LOCATION
+
+\begin{table}[H]
+        \begin{center}
+        \setstretch{1} 
+        \caption{\textbf{Characteristics of Design}} \label{table:Weights}
+        \begin{tabular}{|p{1.4in}|p{1in}|} % set column nums and width 
+        \hline
+            \textbf{Characteristic} & \textbf{Value} \\ \hline
+            Neutral Point & 9.638 in \\ \hline
+            Center of Gravity & 9.795 in \\ \hline
+            Design $\alpha$ & 1$\degree$ \\ \hline
+            CL at Design $\alpha$ & 0.169 \\ \hline
+            CD at Design $\alpha$ & 0.010 \\ \hline
+            CL/CD at Design $\alpha$ & 17.616 \\ \hline
+            COP at Design $\alpha$ & 10.189 in \\ \hline
+            Design Velocity & 40 mph \\ \hline
+            Overall Weight & 1,357g \\ \hline
+            Takeoff Velocity & 15 mph \\ \hline
+            Takeoff $\alphs$ & 7.5$\degree$ \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{table}
+
+
 % Max
 \section{Mass Estimates}
 % Calculate the total weight of your aircraft (including the battery, motor, and vial delivery system) and describe how you determined it. What is the power to weight ratio and wing loading of your aircraft? Write a paragraph describing your analysis.
@@ -215,9 +246,9 @@
         \end{center}
     \end{table}
 
-    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. 
+    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that are to be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. 
     
-    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. An power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1V and 24 amps was assumed. With these values the motor will be outputting 266.4 watts. Using this power and the aircraft weight of 1,357 grams, a power to weight ratio of 5.09 g/W was determined.
+    The wing loading of our UAV is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. A power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1V and 24 amps was assumed. With these values the motor will be outputting 266.4 watts. Using this power and the aircraft weight of 1,357 grams, a power to weight ratio of 5.09 g/W was determined.
 
 \include{homeworks/homework4/report/appendix}
 
