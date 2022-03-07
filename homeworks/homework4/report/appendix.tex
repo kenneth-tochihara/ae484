@@ -3,17 +3,61 @@
 \begin{enumerate}[wide,label=\textbf{\arabic*}., labelindent=0pt]
 
     \item \textbf{Wing Loading}
-        \[WS = \frac{W}{S_ref}\]
+        \[W/S = \frac{W}{S_{ref}}\]
         $ W =$ weight [oz]\\
-        $S_ref =$ strain in the $x$ direction after the transformation\\
-        $\epsilon_y' =$ strain in the $x$ direction after the transformation\\
+        $S_{ref} =$ wing reference area [ft$^2$]\\
         
-        \underline{For an aluminum beam in bending with a force of 8.90 N at Rosette 1:} \\
         \begin{align*}
-            \gamma_{xy} &= (4.0 \times 10^{-6}) - (4.0 \times 10^{-6})\\
-            &= 0.0 \times 10^{-6}\\
+            W/S &= \frac{47.867}{16985}\\
+            &= 9.18 \text{ oz/ft$^2$}\\
         \end{align*}
+        
+        \item \textbf{Aspect Ratio}
+        \[AR = \frac{b^2}{S_{ref}}\]
+        $ b =$ span [in]\\
+        $S_{ref} =$ wing reference area [in$^2$]\\
+        
+        \begin{align*}
+            AR &= \frac{69.8^2}{746.330}\\
+            &= 6.530 \text{ N.D.}\\
+        \end{align*}
+    
+    \item \textbf{Center of Gravity}
+        \[C_g = \frac{\sum_i m_i x_i }{\sum_i m_i}\]
+        $ m =$ mass [g]\\
+        $ x =$ distance from tip in x-direction [in]\\
+        
+        \begin{align*}
+            C_g &= \frac{47.867}{16985}\\
+            &= 9.18 \text{ g/in$^2$}\\
+        \end{align*}
+        
+    \item \textbf{Taper Ratio}
+        \[\lambda = \frac{c_t}{c_r}\]
+        $ c_t =$ tip chord [in]\\
+        $ c_r =$ root chord [in]\\
+        
+        \begin{align*}
+            \lambda &= \frac{7.5}{14.5}\\
+            &= 0.517 \text{ N.D.}\\
+        \end{align*}    
  
 \section*{Appendix B: Engineering Drawings}\label{ApxB}   
 \includepdf[pages=-,angle=90]{homeworks/homework4/report/Figure/gpetrov2_aircraft_assembly_exploded_drawing.pdf}
+
+\section*{Group Member Contributions}
+% Make a table indicating how each group member contributed to the report
+
+    \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{ | p{2in} | p{4in}| } 
+            \hline
+            \textbf{Group Member} & \textbf{Contribution} \\  \hline
+            Anshuk Chigullapalli & \\ \hline
+            George Petrov &  \\ \hline
+            Kenneth Tochihara & \\ \hline
+            Jeffery Zhou & \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{table}
 \end{enumerate}
