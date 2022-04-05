@@ -1,0 +1,83 @@
+\input{settings.tex}
+% NOTES
+%  - Double spacing (always fix for figures and tables though)
+%  - for tables, remember to make them single spaced using \renewcommand{\arraystretch}{1}
+%  - Always pull from GitHub to Overleaf when there are commits to be pulled (Menu > GitHub > PULL)
+%  - for REFERENCES, use \cite{<label>} to link the reference.
+
+% % TABLE TEMPLATE
+% \begin{table}[H]
+%     \begin{center}
+%     \setstretch{1} 
+%     \caption{\textbf{<caption here>}} \label{table:<label here>}
+%     \begin{tabular}{|p{0.3in}|p{1in}|p{1in}|} % set column nums and width
+%         \hline \textbf{No.} & \textbf{Item} & \textbf{Weight} \\ \hline % column headers
+%         1 & Hot dogs & 2 lbs \\ \hline
+%     \end{tabular}
+%     \end{center}
+% \end{table}
+
+\begin{document}
+
+%%% Title Pa
+\begin{center}
+    {\Large\textbf{AE 484 Homework 6}}\\
+    Anshuk Chigullapalli, Max Kaiser, George Petrov, Kenneth Tochihara, Jeffery Zhou\\
+\end{center}
+
+\section{Changes Made}
+
+    The team considered the changes suggested by Professor Gregory Elliott and modified the design of the aircraft accordingly. The primary changes made to the design are listed below. New engineering drawings are provided in the       of this document.
+    
+    \begin{enumerate}
+        \item The winglets in the previous design had a curved merge into the wing. However, this is difficult in terms of manufacturability. The blend is replaced by a hard corner between the wing and the winglet.
+        \item For ease of manufacturing, the elevons are extended to the end of the wing rather than being in the middle
+        \item A plywood plate is added between the two wings to provide support for all the components and the motor mount.
+        \item The spars are reduced in length because the original lengths were too long
+        \item Changes to the design of the motor mount
+    \end{enumerate}
+    
+    Another suggestion that was made was not using a 3D printed motor mount due to potential shear between the layers of the 3D print making it a bad material choice. The alternative would be a metal (potentially Aluminum) motor mount. However, the team decided to continue to go with the 3D printed mount for weight benefits and faster prototyping. If through physical test the team comes to the conclusion that the 3D printed motor mount would not work, the switch to a metal motor mount would be made.
+
+\section{Bill of Materials}
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Item}                                                    & \textbf{Vendor}                                                & \textbf{Model and Part \#}                                                                           & \textbf{Price (\$)}                                        \\ \hline
+    Front Spar                                                       & \begin{tabular}[c]{@{}c@{}}Goodwinds\\ Composites\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.5" x 24" Pultruded Carbon Tube, \\ PCT500024\end{tabular}               & 17.90                                                      \\ \hline
+    Back Spar                                                        & \begin{tabular}[c]{@{}c@{}}Goodwinds\\ Composites\end{tabular} & \begin{tabular}[c]{@{}c@{}}0.375" x 24" Pultruded Carbon Tube, \\ PCT375024\end{tabular}             & 10.23                                                      \\ \hline
+    Trap Door                                                        & 3D Printed                                                     & N/A                                                                                                  & 0.10                                                       \\ \hline
+    ESC                                                              & Value Hobby                                                    & \begin{tabular}[c]{@{}c@{}}GForce 40A Brushless ESC,\\ VHB-SC-4494\end{tabular}                      & 10.00                                                      \\ \hline
+    Battery                                                          & Value Hobby                                                    & \begin{tabular}[c]{@{}c@{}}GForce 30C 2200mAh 3S 11.1V LiPo, \\ RFI-LP-1899\end{tabular}             & 14.90                                                      \\ \hline
+    Motor                                                            & Value Hobby                                                    & \begin{tabular}[c]{@{}c@{}}GForce E480 Brushless Outrunner Motor, \\ LEO-MT-3461\end{tabular}        & 17.00                                                      \\ \hline
+    Propeller                                                        & Horizon Hobby                                                  & 12x6 3-Blade Pusher, MAS3B12X60R01                                                                   & 14.65                                                      \\ \hline
+    Receiver                                                         & Horizon Hobby                                                  & \begin{tabular}[c]{@{}c@{}}AR620 DSMX 6-Channel Sport Receiver, \\ SPMAR620\end{tabular}             & 49.99                                                      \\ \hline
+    Servos                                                           & Value Hobby                                                    & \begin{tabular}[c]{@{}c@{}}Emax ES08MA II Analog Metal Gear \\ Mirco Servo, VHB-SV-6148\end{tabular} & \begin{tabular}[c]{@{}c@{}}17.50\\ (Set of 4)\end{tabular} \\ \hline
+    Motor Mount                                                      & 3D Printed                                                     & N/A                                                                                                  & 0.44                                                       \\ \hline
+    Wing Cores                                                       & ?                                                              & ?                                                                                                    & 90                                                         \\ \hline
+    \begin{tabular}[c]{@{}c@{}}Elevon Actuator\\ Holder\end{tabular} & 3D Printed                                                     & N/A                                                                                                  & 0.04                                                       \\ \hline
+    Winglets                                                         & DragonPlate                                                    & \begin{tabular}[c]{@{}c@{}}0 Degree Carbon Fiber Uni Sheet\\ 1/8'' x 6'' x 6''\end{tabular}          & \begin{tabular}[c]{@{}c@{}}55.62\\ (2 sets)\end{tabular}   \\ \hline
+    Hand Holder                                                      & Amazon                                                         & \begin{tabular}[c]{@{}c@{}}Plywood Sheet \\ 12'' x 12'' x 1/8 ''\end{tabular}                        & 12.9                                                       \\ \hline
+    \end{tabular}
+    \end{table}
+
+\section{Table of Contributions}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Team Member} & \textbf{Contributions}  \\ \hline
+            Anshuk Chigullapalli & \\ \hline
+            George Petrov & \\ \hline
+            Jeffery Zhou & \\ \hline
+            Kenneth Tochihara & \\ \hline
+            Max Kaiser & \\ \hline
+        \end{tabular}
+        \caption{Table of Contributions}
+        \label{tab:contributions}
+    \end{table}
+    
+\end{document}
