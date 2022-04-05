@@ -19,15 +19,15 @@
 
 \begin{document}
 
-%%% Title Pa
+%%% Title Page
 \begin{center}
     {\Large\textbf{AE 484 Homework 6}}\\
     Anshuk Chigullapalli, Max Kaiser, George Petrov, Kenneth Tochihara, Jeffery Zhou\\
 \end{center}
 
-\section{Changes Made}
+\section{Design Changes}
 
-    The team considered the changes suggested by Professor Gregory Elliott and modified the design of the aircraft accordingly. The primary changes made to the design are listed below. New engineering drawings are provided in the       of this document.
+    The team considered the changes suggested by Professor Elliott and modified the design of the aircraft accordingly. The primary changes made to the design are listed below and the updated engineering drawings for the aircraft assembly are provided  \href{https://github.com/ktt3/ae484/tree/main/homeworks/homework6/drawing}{here} on our GitHub.
     
     \begin{enumerate}
         \item The winglets in the previous design had a curved merge into the wing. However, this is difficult in terms of manufacturability. The blend is replaced by a hard corner between the wing and the winglet.
@@ -37,12 +37,12 @@
         \item Changes to the design of the motor mount
     \end{enumerate}
     
-    Another suggestion that was made was not using a 3D printed motor mount due to potential shear between the layers of the 3D print making it a bad material choice. The alternative would be a metal (potentially Aluminum) motor mount. However, the team decided to continue to go with the 3D printed mount for weight benefits and faster prototyping. If through physical test the team comes to the conclusion that the 3D printed motor mount would not work, the switch to a metal motor mount would be made.
-    
-    The drawings for the final aircraft are appended at the end of this document.
+    Another suggestion that was made was to not use a 3D printed motor mount due to potential shear between the layers of the 3D print, making it a bad material choice. The alternative would be an aluminum motor mount. However, the team decided to continue with the 3D printed mount for weight benefits and faster prototyping. If experimental tests conclude that the 3D printed motor mount fails, the switch to a metal motor mount will be made.
 
 \section{Bill of Materials}
 
+    The bill of materials accounts for all components needed to manufacture the aircraft. When calculating the cost for the wings, it was assumed that each wing required one wing core and one balsa sheet to manufacture. Furthermore, the cost of the 3D prints were determined by the cost of the PLA material extruded to manufacture the component. The total cost of the aircraft based on this table is \$319.27.
+    
     \begin{table}[H]
     \centering
     \caption{Bill of Materials} \label{tab:bom}
@@ -70,9 +70,7 @@
     
 \section{Manufacturing Files}
     
-    The manfuacturing files for the laser cutter and 3D printers have been generated. They can be found \href{https://github.com/ktt3/ae484/tree/main/homeworks/homework6/manufacturing}{here} in our GitHub. The GCode for the 3D printers have already been generated for Max's CR6 printer.
-    
-    The final drawings for the laser cut, 3D print, and CNC foam parts are appended at the end of this document.
+    The manufacturing files and drawings for the laser cutter, 3D printer, and CNC foam were generated, and are provided \href{https://github.com/ktt3/ae484/tree/main/homeworks/homework6/manufacturing}{here} on our GitHub.
 
     \begin{table}[]
         \centering
@@ -83,8 +81,8 @@
             Winglets & Laser Cut & \verb|flat_winglets.pdf| & N/A \\ \hline
             Hand Holder & Laser Cut & \verb|holder_mid.pdf| & N/A \\ \hline
             Motor Mount & 3D Printed & \verb|motor_mount.stl| & 26 g \\ \hline
-            Elevon Mount & 3D Printed & \verb|Elevon Mount.stl| & 1 g \\ \hline
-            Vial Trap Door & 3D Printed & \verb|Trap Door.stl| & 5 g \\ \hline
+            Elevon Mount & 3D Printed & \verb|elevon_mount.stl| & 1 g \\ \hline
+            Vial Trap Door & 3D Printed & \verb|trap_door.stl| & 5 g \\ \hline
             Main Wing +Z & CNC Foam & \verb|main_wing_+z.stl| & N/A \\ \hline
             Main Wing -Z & CNC Foam & \verb|main_wing_-z.stl| & N/A \\ \hline
         \end{tabular}
@@ -99,18 +97,12 @@
         \begin{tabular}{|c|c|}
             \hline
             \textbf{Team Member} & \textbf{Contributions}  \\ \hline
-            Anshuk Chigullapalli & \\ \hline
-            George Petrov & \\ \hline
-            Jeffery Zhou & \\ \hline
-            Kenneth Tochihara & \\ \hline
-            Max Kaiser & \\ \hline
+            Anshuk Chigullapalli & Authored Design Changes, Generated Drawings \\ \hline
+            George Petrov & Executed CAD Changes \\ \hline
+            Jeffery Zhou & Co-Authored Bill of Materials \\ \hline
+            Kenneth Tochihara & Executed CAD Changes, Generated Manufacturing Files and Drawings \\ \hline
+            Max Kaiser & Co-Authored Bill of Materials, Generated Manufacturing Files \\ \hline
         \end{tabular}
     \end{table}
-    
-\section*{Appended Drawings}
-
-% From Q1
-
-% From Q3
     
 \end{document}
