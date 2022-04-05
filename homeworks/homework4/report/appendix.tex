@@ -1,5 +1,5 @@
 \appendix
-\renewcommand{\thesection}{\textbf{Appendix \Alph{section}:}}
+\renewcommand{\thesection}{\textbf{Appendix \Alph{section}}}
 
 \section{Sample Calcs} \label{apx:sample_calc}
 \begin{enumerate}[wide,label=\textbf{\arabic*}., labelindent=0pt]
@@ -25,13 +25,15 @@
         \end{align*}
     
     \item \textbf{Center of Gravity}
-        \[C_g = \frac{\sum_i m_i x_i }{\sum_i m_i}\]
-        $ m =$ mass [g]\\
-        $ x =$ distance from tip in x-direction [in]\\
+        \[x_{cg} = \frac{\sum_i m_i x_i }{\sum_i m_i}\]
+        $ m_i =$ mass of component [g]\\
+        $ x_i =$ distance from tip in x-direction of component [in]\\
+    
         
         \begin{align*}
-            C_g &= \frac{47.867}{16985}\\
-            &= \color{red}{JEFFFFFFFFFFFFFFFFFFFFF}9.18 \text{ g/in$^2$}\\
+            \sum_i m_i &= (32)+(220)+(41)+(36.6)+(8)+(72)+(39.4)+(776)+(162) = 1387\\
+            x_{cg} &= \frac{(32)(0)}{(1387)} + \frac{(220)(56.3)}{(1387)} + \frac{(41)(99.2)}{(1387)} + \frac{(36.6)(149.9)}{(1387)} + \frac{(8)(179.9)}{(1387)} + \frac{(72)(297.5)}{(1387)} \\
+            &+ \frac{(39.4)(269.9)}{(1387)} + \frac{(776)(295)}{(1387)} + \frac{(162)(355)}{(1387)} = 244.6 mm\\
         \end{align*}
         
     \item \textbf{Taper Ratio}
@@ -42,7 +44,17 @@
         \begin{align*}
             \lambda &= \frac{7.5}{14.5}\\
             &= 0.517 \text{ N.D.}\\
-        \end{align*}    
+        \end{align*}
+        
+    \item \textbf{Power to Weight Ratio}
+        \[P/W = \frac{P}{W}\]
+        $ P =$ power [W]\\
+        $ W =$ weight [g]\\
+        
+        \begin{align*}
+            P/W &= \frac{266.4}{1357}\\
+            &= 0.196 \text{ W/g}\\
+        \end{align*}
  
 \section{Engineering Drawings} \label{apx:eng_drawings}
     \includepdf[pages=-,angle=90]{homeworks/homework4/report/Figure/anshukc2_aircraft_dimensions.pdf}
@@ -71,7 +83,7 @@
             Max Kaiser & Created the XFLR5 model of the UAV, with and without winglets. Completed sections 5,6 and 7 of the report. \\ \hline
             George Petrov & Designed wing, designed cutouts, integrated components, generated exploded views, sample calculations \\ \hline
             Kenneth Tochihara & Designed elevon actuator, designed cutouts, integrated components, generated equipment locations, managed repository \\ \hline
-            Jeffery Zhou & \\ \hline
+            Jeffery Zhou & Completed sections 3 and 4 of the report\\ \hline
         \end{tabular}
         \end{center}
     \end{table}

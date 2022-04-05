@@ -32,7 +32,7 @@
     \subsection{Fabrication Drawings}
     % Detail 3 view drawings (or two views when appropriate) view drawings of all fabricated components sufficiently dimensioned for manufacturing. Note that complex curves such as airfoils can show overall dimensions (like the chord length and thickness) with a leader and note to the surface indicating that the curve will be provided electronically. Be sure to name all parts and indicate the quantity and material they are made out of.
     
-        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and cutouts for them, the elevons (and their actuator holders), the hand-holds, the motor retainer and and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC milling. The engineering drawings for all the relevant components are provided in the Appendix B.
+        The fabricated components of the aircraft include the  wings (and the cutouts in their foam), the vial release mechanism, the spars and cutouts for them, the elevons (and their actuator holders), the hand-holds, the motor retainer and and the winglets. Some of these components have complex geometries that will require the use of computer aided manufacturing such as 3D printing or CNC milling. The engineering drawings for all the relevant components are provided in the \ref{apx:eng_drawings}.
     
         Table \ref{table:fab_components} provides details on all fabricated components such as quantity and the material used.
         % insert images of the dimensioned drawings? Or create an appendix
@@ -58,13 +58,13 @@
     \subsection{Full Assembly}
     % A fully assembled drawing showing the locations of all the parts and overall dimensions of key elements of the aircraft when it is put together. This should be presented both as a 3 view and isometric view drawing with all the parts named on the drawing.
     
-        The team assembled all the individual components together in Siemens NX and created the full aircraft engineering drawing including the 3 view and isometric drawings, provided in Appendix B. The overall dimensions can also be seen in the engineering drawings. There are three primary elements on the aircraft: the wings, the winglets and the elevons. The other components are electronics or actuators and are discussed in more detail in the following sections.
+        The team assembled all the individual components together in Siemens NX and created the full aircraft engineering drawing including the 3 view and isometric drawings, provided in \ref{apx:eng_drawings}. The overall dimensions can also be seen in the engineering drawings. There are three primary elements on the aircraft: the wings, the winglets and the elevons. The other components are electronics or actuators and are discussed in more detail in the following sections.
         
         Figure \ref{fig:iso_render} shows a CAD rendering of the complete aircraft in the isometric view. More renders are shown in Figures \ref{fig:bottom_render} and \ref{fig:closeup_render} to provide a better view of the aircraft.
           
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.1\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_front_iso.png}
+            \includegraphics[width=.9\textwidth]{homeworks/homework4/report/Figure/aircraft_assembly_front_iso.png}
             \caption{\textbf{Aircraft Isometric Render}}
             \label{fig:iso_render}
         \end{figure}
@@ -87,7 +87,7 @@
     \subsection{Equipment Locations}
     % A fully assembled drawing showing the locations of the equipment and instrumentation (components you buy and don’t fabricate like the receiver, servos, motor, battery, camera, video transmitter, ESC, etc.) on or within the airframe with key dimensions given for placement. This should be presented both as a 3 view and isometric view drawing and it may be useful to use cut-away views in some cases to better show where equipment/components are located.
     
-        In Figure \ref{fig:component_locations}, locations of all commercial components are labeled in Table \ref{tab:component_locations}. Appendix B shows the full engineering drawing of the render.
+        In Figure \ref{fig:component_locations}, locations of all commercial components are labeled in Table \ref{tab:component_locations}. \ref{apx:eng_drawings} shows the full engineering drawing of the render.
         
         \begin{figure}[H]
             \centering
@@ -119,7 +119,7 @@
     \subsection{Exploded View}
     % An isometric exploded view assembly drawing with all the fabricated parts and purchased components labeled. No dimensions are needed for this drawing.
     
-        In Figure \ref{fig:exploded}, an exploded view render of all the components can be seen. Appendix B, shows the full engineering drawing of the render below.
+        In Figure \ref{fig:exploded}, an exploded view render of all the components can be seen. \ref{apx:eng_drawings}, shows the full engineering drawing of the render below.
         
         \begin{figure}[H]
             \centering
@@ -135,6 +135,9 @@
     % Write a brief paragraph describing your design and the drawings presented.
     
         The aircraft was designed as a flying wing with tall winglets to add yaw stability to the flight. These winglets are secured with epoxied dowels to firmly secure the two components together. The main wing is assembled onto two carbon fiber spars. These lengths were determined based on the available at the source provided for carbon fiber tube purchases. Many of the components were mounted into the wing underneath to reduce protrusions throughout the body of the aircraft. Holes for servos, receiver, motor mount, battery, and vial mechanism are used to mount these components inside. Control surfaces and their actuators were included in the design to further increase the fidelity of model. A preliminary design of the hand holder was also included, with plans to refine the model in the future to incorporate throwing mechanics and ergonomics.
+        
+        Table \ref{table:design_char} provides details on all the other design characteristics of the aircraft.
+        
 
 % Anshuk    
 \section{Vial Release Mechanism}
@@ -167,16 +170,78 @@
         \label{fig:vial_open}
     \end{figure}
     
-    This design involves only one moving part connected to the servo, and so was chosen for its simplicity and ease of building. The only harnessing required in this design would be for the servo, because the plate is attached to the servo itself and the vial sits freely. The primary concern is ensuring that we cut the foam around the mechanism in the right way to account for the rotation of the flat plate. The team plans on fixing this concern by making the CAD accurate and fixing any tolerance issues so we can cut the fuselage foam accordingly.
+    This design involves only one moving part connected to the servo, and so was chosen for its simplicity and ease of building. The only harnessing required in this design would be for the servo, because the plate is attached to the servo itself and the vial sits freely. The primary concern is ensuring that the foam cut around the mechanism in the right way to account for the rotation of the flat plate. The team plans on fixing this concern by making the CAD accurate and fixing any tolerance issues so the fuselage foam can be cut accordingly.
     
 % Jeff
 \section{Free-Body Diagram}
 % Using the weights and positions of all components (i.e. instrumentation, servos, motor, battery etc.) draw a free body diagram (using the CAD package) and calculate a force and moment balance using an appropriate reference point. Calculate the center of gravity of all the fabricated parts and components and list their coordinates relative to an appropriate reference point. Calculate the weight and center of gravity of the entire vehicle and write a short paragraph describing your analysis. 
     
-    ni de mama
-
+    In this section, the team looked into the weights and positions of all components including the wing, spars, and the provided electronic components. By looking into the CAD drawings and using accurate measurement tools built into Siemens NX, the team was able to extract the precise locations of all important components along the chord-wise direction of the wing. Figure \ref{fig:free_body} represents a free body diagram of the aircraft and shows the major aerodynamic forces that the flying wing will experience through the flight and the location of which the forces are applied. The aircraft is simplified to a beam in this analysis to understand the overall loads across the $x$-axis.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.6]{homeworks/homework4/report/Figure/fbd.png}
+        \caption{\textbf{Free-body diagram of the flying wing}}
+        \label{fig:free_body}
+    \end{figure}
+    
+    As shown in the Figure \ref{fig:free_body}, the plane was designed so that the center of gravity is in front of the aerodynamic center, providing good aerodynamic stability for the flying wing. However, since the center of gravity ($x_{cg}$) is only marginally ahead of the aerodynamic center ($x_{ac}$), there may be some instability. Therefore, more analysis and reconfiguration will be needed in order to obtain an optimal stability for the aircraft. A more detailed diagram as shown below in Figure \ref{fig:weight_distribution} illustrates the chord-wise positions of all components on the aircraft so that the weight distribution can be better visualized. 
+    
+    Table \ref{tab:COG_calc} and Equation \ref{eqn:COG_calc} shows how the center of gravity ($x_{cg}$) of the aircraft was calculated. It was compared to the value computed using XFLR5 to validate the calculation in Section \ref{sec:flight_char}. 
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.52]{homeworks/homework4/report/Figure/components.png}
+        \caption{This image displays the weight distribution of components on the wing.}
+        \label{fig:weight_distribution}
+    \end{figure}
+    
+    
+    \begin{table}[H]
+        \begin{center}
+        \caption{\textbf{Component Masses and Locations}} \label{tab:COG_calc}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Component} & \textbf{Weight (g)} & \textbf{Distance from Front (mm)} \\ \hline
+        Fudge Factor Mass & 32 & 0 \\ \hline
+        Battery & 220 & 56.3  \\ \hline
+        Vial Servo, Vial, ESC & 41 & 99.2 \\ \hline
+        24 in Spar & 36.6  & 149.9 \\ \hline
+        Receiver & 8 & 179.9 \\ \hline
+        2 Elevon Servos & 72 & 267.5 \\ \hline
+        36 in Spar & 39.4 & 269.9 \\ \hline
+        Wing & 776 & 295 \\ \hline
+        Motor, Propeller & 162 & 355 \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{table}
+    
+    Therefore, from the table shown above, the team is able to calculate the precise center of gravity, $x_{cg}$, location of the wing using Equation \ref{eqn:COG_calc}.
+    
+    \begin{equation} \label{eqn:COG_calc}
+        x_{cg} = \frac{\sum_i m_i x_i }{\sum_i m_i} = 244.6 \text{ mm}
+    \end{equation}
+    
+    As shown in the Table \ref{tab:COG_calc} above, a fudge factor mass was included to this aircraft to achieve a $x_{cg}$ that is in front of the $x_{ac}$ of the aircraft. Doing this would not exceed the overall mass of the aircraft as the 3 pound requirement will be met.
+    
 % Jeff
 \section{Prominent Forces}
+
+    Based on the force diagram shown in Figure \ref{fig:free_body}, the loads and moments displayed must be accounted for when designing a structural subsystem of the aircraft. The aircraft was designed in a manner where the aerodynamic loads are distributed through the two carbon fiber spars running across the span of the wing. One of these spars being located at the forward end of the aircraft, having a 0.5 in diameter and spanning 24 in, and the other spar being located at the aft end of the aircraft, having a 0.375 in diameter spars and spanning 36 in. The skin of the aircraft also plays a roll in enforcing the structure. 
+    
+    The major forces and moments which must be taken into account are the lift, thrust, and the resultant moment about the center of gravity. If the aircraft is split in half to analyze the lifting force on each side of the wing, the spars shall counteract in keeping the wind as a static member. The spars act as cantilever beams in this analysis. This can be see in Figure \ref{fig:wing_cant} where the red is the spar and the grey triangle is the wing. As demonstrated, the lift is being created and at the middle of the aircraft, but there is a counter moment to keep the structure static. The counter moment comes from the spar and is mirrored exactly on the $-y$ side of the aircraft.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{homeworks/homework4/report/Figure/forces_wing.png}
+        \caption{\textbf{Force diagram of wing loading with spar}}
+        \label{fig:wing_cant}
+    \end{figure}
+    
+    The major areas of stress are located at the joint between each wing. This is where both sides of the wings are connected and in order to keep this region from failing, the spars act as continuous structural members within this connection. The elevon mechanism will also be under significant stress. Due to the high speeds of this aircraft, there is a risk that the actuating beam of the elevon mechanisms will buckle due to the counteracting aerodynamics forces on the elevon. 
+    
+    The battery, the vial, vial servo, and the ESC components are all positioned so that the their weight are loaded to the foam body. The elevon servo is loaded onto the foam. Finally, the motor and propeller are positioned so that the motor connector structure is directly screwed into the 36 in spar of which the thrusting force of the motor acts upon. Finally, the aerodynamic forces experienced by the elevons mostly act upon the foam and skin structures of the aircraft itself as mentioned above. Since the elevons' total mass is very small compared with the total mass of the aircraft, the team is confident that the plane structure is able to support those forces. 
+
 % Based on your drawing write a short description indicating how the major forces and moments (i.e. weights, aerodynamic forces/moments, thrust etc.) will be structurally supported by your airframe design. Feel free to use neat simplified sketches and analysis to indicate how the stresses are carried by the airframe structure. Indicate the major regions of where stress concentrations may be the largest concern in your design.
 
 % Max
@@ -186,7 +251,7 @@
     \begin{table}[H]
     \begin{center}
     \caption{\textbf{Design Characteristics of Aircraft}} \label{table:design_char}
-    \begin{tabular}{|c|c|} 
+    \begin{tabular}{|p{2.5in}|p{1.4in}|} 
         \hline
         \textbf{Characteristic} & \textbf{Value} \\ \hline
         Wingspan (in) & 69.5 \\ \hline
@@ -208,13 +273,13 @@
     \end{center}
     \end{table}
 
-    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was desired in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $C_g$, proving useful with the pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. \\
+    The size and shape of the wing was chosen based on a few factors. The first choice made was in the wing span as the widest wings were desired to produce the most effective lift for the design. Then, the team decided that at least a 20 deg sweep was desired in order to ensure that there was adequate yaw stability without having to include massive winglets in the design. Having these two quantities specified, the airfoil was chosen in concert with choosing the root chord length, as the entire allotted thickness was desired in order to fit a majority of the components within the wing and without the need for an additional fuselage. The NACA 23012 airfoil was selected since it had this chamber thickness to fit these components and also created minimal moment about the center of gravity. The mean chord length was chosen based on the thickness of the NACA 23012 which offers a 1.75 in thickness at the root. From XFLR5 simulations, it was found that the NACA 23012 also has a center of pressure that is far back enough to be behind the $x_{cg}$, proving useful with the pusher motor configuration. The tip chord length was set at 7.5 to give sufficient room to attach adequately sized winglets. 
 
-    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20 deg, large winglets were not necessary. An area of 30 in$^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. The airfoil chosen for the winglets was the NACA 0010 as this airfoil does not have any chamber and would more effectively provide yaw stability. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to choose the elevon to chord ratio which stated that the chord shall be a range of 16\% to 20\%. 18\% was then chosen for this ratio.
+    After having chosen the wing design, the winglet design was the next area of focus. Since the sweep was already determined to be over 20\degree, large winglets were not necessary. An area of 30 in$^2$ was selected to generate some more lateral stability without adding too much weight to the ends of the wings. The airfoil chosen for the winglets was the NACA 0010 as this airfoil does not have any chamber and would more effectively provide yaw stability. As for the elevons, 50\% of the wingspan was selected to be utilized for the actuators and were biased towards the outer ends of the wings. The lecture slides were utilized to choose the elevon to chord ratio which stated that the chord shall be a range of 16\% to 20\%. 18\% was then chosen for this ratio.
 
 
 % Max
-\section{Flight Characteristics}
+\section{Flight Characteristics} \label{sec:flight_char}
 % Write a paragraph and present calculations/analysis Indicating why your CG is located appropriately to achieve stability. Hint: Evaluate the longitudinal static margin of your simplified aircraft (i.e. wing without the winglets or vertical stabilizer) using XFLR5 and locating the neutral point. Also give conceptual arguments of the aircrafts lateral and directional stability. In addition to where you have placed the battery show that it can be adjusted along the axis (i.e. if possible it is good to allow the battery to be placed over the quarter chord (MAC) location on the wing). Provide a table of the overall geometric and flight characteristics of your aircraft (neutral point, SM, design α, design velocity, overall weight, etc.) and your best estimate velocity and angle of attack when hand launched. From your analysis provide graphs of (CD, CL, CL/CD, CM, vs. α) and describe their characteristics and what you conclude from them. Be sure to include paragraphs describing these results as they are presented and justifying your decisions.
 
     The team completed the XFLR5 model of the UAV both with and without winglets, with each model including the weights of all components in their respective placement. The final center of gravity location for the UAV ended up being 9.8 inches from the front of the UAV as determined by the XFLR5 center of gravity estimation. This was found to be sufficiently far forward as the center of pressure of the design stays behind this point up until about 10 deg AOA. This was as far forward as the center of gravity could be placed while still fitting all the necessary components within the wing itself. 
@@ -226,7 +291,7 @@
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.5]{homeworks/homework4/report/Figure/battery_location.png}
-        \caption{This image displays the room to move the battery if necessary.}
+        \caption{\textbf{Battery Maneuverability}}
         \label{fig:Battery Location}
     \end{figure}
 
@@ -236,11 +301,11 @@
         \begin{center}
         \setstretch{1} 
         \caption{\textbf{Characteristics of Design}} \label{table:Weights}
-        \begin{tabular}{|p{1.4in}|p{1in}|} % set column nums and width 
+        \begin{tabular}{|p{1.6in}|p{.8in}|} % set column nums and width 
         \hline
             \textbf{Characteristic} & \textbf{Value} \\ \hline
             Neutral Point (in) & 9.638 \\ \hline
-            Center of Gravity (in) & 9.795 \\ \hline
+            Center of Gravity (in) & 9.630 \\ \hline
             Design $\alpha$ (deg) & 1 \\ \hline
             CL at Design $\alpha$ & 0.169 \\ \hline
             CD at Design $\alpha$ & 0.010 \\ \hline
@@ -305,9 +370,9 @@
         \end{center}
     \end{table}
 
-    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that are to be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under our 3 pound limit. 
+    The weight was calculated using the features XFLR5 provides. The mass of the wings and winglets were calculated using the wing area feature and the weight per unit area measurements provided in the lecture notes. Once these figures were collected, the point masses could be shifted within the software to represent the locations in reality. These were added in XFLR5 with placement as according to the CAD model, with the weights being figures taken either directly from course material or from the website with the listings of the carbon fiber tubes that are to be used for the spars. 45 grams of additional weight was added to account for any extra material that would connect our components back into the main spars. Given the wings, winglets, all equipment, and extra weight the final weight is 0.02 pounds under the 3 pound limit. 
     
-    The wing loading of the design is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The power to weight ratio is a little harder to determine. A power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1 V and 24 A was assumed. With these values the motor will be outputting 266.4 W. Using this power and the aircraft weight of 1357 grams, a power to weight ratio of 5.09 g/W was determined.
+    The wing loading of the design is about 2 g/in$^2$, which was determined using the wing loading feature given in XFLR5. The wing loading was also calculated by hand in \ref{apx:sample_calc}. The power to weight ratio is a little harder to determine. A power vs. voltage and amperage table was utilized from the motor provider. For this determination, a battery outputting 11.1 V and 24 A was assumed. With these values the motor will be outputting 266.4 W. Using this power and the aircraft weight of 1357 grams, a power to weight ratio of 0.196 W/g was determined. These calculations are shown in \ref{apx:sample_calc}.
 
 \include{homeworks/homework4/report/appendix}
 
